@@ -9,53 +9,76 @@ contact.css
 ------------- * */
 
 /* ---- Reset CSS ---- */
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
     font-size: 100%;
 }
-body{
+
+body {
     font-family: 'League Spartan', Helvetica, Arial, sans-serif;
     font-weight: 600;
     font-size: 1.25em;
-    line-height: 24px;
+    line-height: 1.5rem;
     color: white;
     background-color: #2A2D34;
 }
-li{
+
+li {
     list-style: none;
 }
-h1 , h2 , h3 , h4 , h5 , h6 , p{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     font-weight: inherit;
     font-size: inherit;
     font-style: normal;
 }
-a{
+
+a {
     display: block;
     color: inherit;
     text-decoration: none;
 }
-img , svg , video , iframe , picture{
+
+img,
+svg,
+video,
+iframe,
+picture {
     display: block;
     width: 100%;
     max-width: 100%;
 }
-form , input , textarea , option , label , button{
+
+form,
+input,
+textarea,
+option,
+label,
+button {
     display: block;
     font-size: 1em;
     font-family: inherit;
     background-color: transparent;
 }
+
 /* ---- Reset CSS ---- */
 
 /* ---- ANIMACIÓN DEL BACKGROUND ---- */
 /* Descripción: Estilos para la animación de fondo de la web */
-.circulos{
+.circulos {
     width: 100%;
     height: 100%;
     background-color: #2A2D34;
@@ -65,12 +88,14 @@ form , input , textarea , option , label , button{
     left: 0;
     z-index: -1;
 }
-.circulo{
+
+.circulo {
     width: 20%;
     height: 20%;
-    border: 50px solid #7D53DE;
+    border: 3.125rem solid #7D53DE;
     border-radius: 50%;
-    filter: blur(3rem); /*Nos permite desenfocar los círculos*/
+    filter: blur(3rem);
+    /*Nos permite desenfocar los círculos*/
 
     position: absolute;
     top: 40%;
@@ -78,16 +103,18 @@ form , input , textarea , option , label , button{
 
     animation: expand 60s linear infinite both;
 }
-.blue{
-    border: 50px solid #009DDC;
+
+.blue {
+    border: 3.125rem solid #009DDC;
 
     animation: expandblue 60s linear infinite both;
 }
+
 /* ---- ANIMACIÓN DEL BACKGROUND ---- */
 
 /* ---- HEADER CON ENLACE PARA EL INICIO ---- */
 /* Descripción: Estilos para el header que contiene el logo de la web */
-.header{
+.header {
     width: 100%;
     /* background-color: aqua; */
 
@@ -95,12 +122,12 @@ form , input , textarea , option , label , button{
 
     display: flex;
 }
-.home{
+
+.home {
     /* background-color: grey; */
     margin: auto;
 }
-.home__a{}
-.home__img{}
+
 /* ---- HEADER CON ENLACE PARA EL INICIO ---- */
 
 /* ---- FORMULARIO ---- */
@@ -111,10 +138,10 @@ form , input , textarea , option , label , button{
    - .form: El formulario con las redes sociales
 */
 
-.section{
+.section {
     width: 90%;
-    max-width: 1200px;
-    min-height: 600px;
+    max-width: 75rem;
+    min-height: 37.5rem;
     background-color: #2a2d34d2;
 
     padding: 5rem 3rem;
@@ -126,16 +153,18 @@ form , input , textarea , option , label , button{
     align-items: flex-start;
     gap: 1.5rem;
 
-    box-shadow:  28px 28px 56px #24262c,
-                -28px -28px 56px #30343c;
+    box-shadow: 1.75rem 1.75rem 3.5rem #24262c,
+        -1.75rem -1.75rem 3.5rem #30343c;
 }
-.section__h2{
+
+.section__h2 {
     width: 50%;
     text-transform: uppercase;
     font-size: 4em;
     line-height: 5rem;
 }
-.form{
+
+.form {
     width: 50%;
 
     display: flex;
@@ -144,28 +173,30 @@ form , input , textarea , option , label , button{
     align-items: flex-start;
     gap: 1rem;
 }
-.form__h1{}
-.form__p{
+
+.form__p {
     margin: 0 0 1rem;
 
     font-family: 'Libre Baskerville', serif;
     font-size: .8em;
     font-weight: 400;
 }
-.form__a{
+
+.form__a {
     text-decoration: underline;
 }
-.form__input{
+
+.form__input {
     width: 100%;
-    max-width: 400px;
-    min-height: 30px;
+    max-width: 25rem;
+    min-height: 1.875rem;
     background-color: #2A2D34;
 
     color: white;
     font-family: 'Libre Baskerville', serif;
     font-size: .8em;
     font-weight: 400;
-    
+
     padding: 5px;
 
     border-radius: 5px;
@@ -173,130 +204,172 @@ form , input , textarea , option , label , button{
     outline: none;
     border: 1px solid white;
 }
-.submit{
-    width: 80px;
+
+.form__textarea {
+    width: 100%;
+    max-width: 25rem;
+    background-color: #2A2D34;
+
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    font-size: .8em;
+    font-weight: 400;
+
+    padding: 5px;
+
+    border-radius: 5px;
+
+    outline: none;
+    border: 1px solid white;
+}
+
+.submit {
+    width: 5rem;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: .625rem;
 
     color: white;
 
     transition: color .5s ease;
     transition: background-color .5s ease;
 }
-.submit:hover{
+
+.submit:hover {
     background-color: white;
     color: #2A2D34;
 }
-.submit:active{
+
+.submit:active {
     transform: scale(.9);
 }
 
-.form__ul{
+.form__ul {
     margin: 1rem 0 0;
-    
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
-.form__li{
+
+.form__li {
     transition: all .5s ease;
 }
-.form__li:hover{
+
+.form__li:hover {
     transform: scale(1.1);
+    color: #009DDC;
 }
-.form__a{}
-.form__svg{
+
+.form__svg {
     width: 1.7rem;
     height: 1.7rem;
 }
+
 /* ---- FORMULARIO ---- */
 
 /* ---- @MEDIAs ---- */
 /* Descripción: Estilos para adaptar la web a resoluciones menores */
-@media (max-width: 1060px){
-    .section__h2{
+@media (max-width: 66.25rem) {
+    .section__h2 {
         font-size: 3.5em;
         line-height: 4.5rem;
     }
 }
-@media (max-width: 890px){
-    .section__h2{
+
+@media (max-width: 55.625rem) {
+    .section__h2 {
         font-size: 3em;
         line-height: 4rem;
     }
 }
-@media (max-width: 768px){
-    .section{/*Cambia el orden de los elementos de filas a columnas*/
+
+@media (max-width: 48rem) {
+    .section {
+        /*Cambia el orden de los elementos de filas a columnas*/
         flex-flow: column nowrap;
     }
-    .section__h2{
+
+    .section__h2 {
         width: 100%;
     }
-    .form{
+
+    .form {
         width: 100%;
     }
 }
-@media (max-width: 450px){
-    .section{
+
+@media (max-width: 28.125rem) {
+    .section {
         padding: 5rem 1rem;
     }
-    .section__h2{
+
+    .section__h2 {
         font-size: 1.5em;
         line-height: 2rem;
     }
 }
+
 /* ---- @MEDIAs ---- */
 
 /* ---- KEYFRAMEs ---- */
-@keyframes expand{
+@keyframes expand {
+
     /* Esta animación hacer referencia al circulo violeta, haciendo que empiece pequeño y se vaya expandiendo */
-    0%{
+    0% {
         width: 20%;
         height: 20%;
-    
+
         top: 40%;
-        left: 40%;    
+        left: 40%;
     }
-    50%{
+
+    50% {
         width: 100%;
         height: 100%;
-    
+
         top: 0%;
-        left: 0%;    
+        left: 0%;
     }
-    100%{
+
+    100% {
         width: 20%;
         height: 20%;
-    
+
         top: 40%;
-        left: 40%;    
+        left: 40%;
     }
+
     /* Trabajar en porcentajes, junto al "infinite" del animation, permite hacer que la animación ocurra en bucle sin interrupciones */
 }
-@keyframes expandblue{
-        /* Esta animación hacer referencia al circulo azul, haciendo que empiece grande y se vaya contrayendo */
-    0%{
+
+@keyframes expandblue {
+
+    /* Esta animación hacer referencia al circulo azul, haciendo que empiece grande y se vaya contrayendo */
+    0% {
         width: 100%;
         height: 100%;
-    
+
         top: 0%;
-        left: 0%;   
+        left: 0%;
     }
-    50%{
+
+    50% {
         width: 20%;
         height: 20%;
-    
+
         top: 40%;
-        left: 40%;     
+        left: 40%;
     }
-    100%{
+
+    100% {
         width: 100%;
         height: 100%;
-    
+
         top: 0%;
-        left: 0%;   
+        left: 0%;
     }
 }
+
 /* ---- KEYFRAMEs ---- */

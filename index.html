@@ -50,10 +50,6 @@ Estructura general:
                 <img src="assets/sm_logo.svg" alt="Logo" height="30" width="30">
             </a>
         </h1>
-        <button class="header__btn">
-            <!--En la versión movil en el header queda solo el h1 y este botón es el que nos permite desplegar el menú-->
-            <div class="header__bar"></div> <!--Esta barra nos permitirá crear un burguer icon que cambie al CLICARLO-->
-        </button>
         <div class="header__menu">
             <!--Este div engloba tanto la barra de navegación de la web, como las redes sociales, para que en la versión responsive, ambas desaparezcan, quedando solo el logo de la web-->
             <nav class="header__nav">
@@ -100,13 +96,31 @@ Estructura general:
         </div>
     </header>
 
+    <div class="burger__btn">
+        <!--En la versión movil en el header queda solo el h1 y este botón es el que nos permite desplegar el menú-->
+        <div class="burger__bar"></div> <!--Esta barra nos permitirá crear un burguer icon que cambie al CLICARLO-->
+    </div>
+
     <!-- SECCIÓN PRINCIPAL DE LA WEB -->
     <main class="main" id="inicio">
 
         <!-- HERO
         Descripción: contiene mi nombre y la posición que pretendo ocupar
         -->
-        <div class="hero">
+        <a href="contact.html" class="hero">
+            <div class="hero__wrapper">
+                <span class="hero__span">Shanti Meldoli</span>
+                <h2 class="hero__h2 front">Frontend</h2>
+                <h2 class="hero__h2 dev">Developer</h2>
+                <!-- Frontend y Developer están colocados en dos h2 distintos, para poder aplicar un translate a Developer en CSS -->
+            </div>
+            <div class="hero__pointer pointer"> <!--Este es un cursor personalizado-->
+                <span class="pointer__span">!Hablemos¡</span>
+            </div>
+        </a>
+
+        <div class="hero noanchor">
+            <!-- Este será el hero que se vea en móvil, sin el cursor personalizado y sin que sea un enlace a contact.html -->
             <div class="hero__wrapper">
                 <span class="hero__span">Shanti Meldoli</span>
                 <h2 class="hero__h2 front">Frontend</h2>
@@ -126,18 +140,6 @@ Estructura general:
                 la <strong>metodología BEM</strong> para garantizar una estructura eficiente y mantenible. </p>
             <div class="proyectos__grid">
                 <article class="proyectos__wrapper">
-                    <a href="#" class="proyectos__a" title="Nomad Movement" target="_blank">
-                        <img src="#" alt="Imagen Web Nomad Movement" class="proyectos__img" loading="lazy">
-                        <h3 class="proyectos__h3">Web Nomad Movement</h3>
-                    </a>
-                </article>
-                <article class="proyectos__wrapper">
-                    <a href="#" class="proyectos__a" title="Be Your Best Be Yoga" target="_blank">
-                        <img src="#" alt="Imagen Be Your Best Be Yoga" class="proyectos__img" loading="lazy">
-                        <h3 class="proyectos__h3">Web Be Your Best Be Yoga</h3>
-                    </a>
-                </article>
-                <article class="proyectos__wrapper">
                     <a href="https://github.com/Shanti-Meldoli/Copycat_Ark-Shelter" class="proyectos__a"
                         title="Ark-Shelter" target="_blank">
                         <img src="assets/ark_shelter_cover.webp" alt="Imagen Ark-Shelter" class="proyectos__img"
@@ -146,7 +148,8 @@ Estructura general:
                     </a>
                 </article>
                 <article class="proyectos__wrapper">
-                    <a href="https://github.com/Shanti-Meldoli/Copycat_Stockholm_70" class="proyectos__a" title="Stockholm70" target="_blank">
+                    <a href="https://github.com/Shanti-Meldoli/Copycat_Stockholm_70" class="proyectos__a"
+                        title="Stockholm70" target="_blank">
                         <img src="assets/stockholm_cover.webp" alt="Imagen Stockholm70" class="proyectos__img"
                             loading="lazy">
                         <h3 class="proyectos__h3">Copycat Stockholm70</h3>
@@ -162,26 +165,23 @@ Estructura general:
             <div class="about__wrapper">
                 <div class="about__info">
                     <h2 class="about__h2">Sobre mi</h2>
-                    <p class="about__p">Hola, soy Shanti, programador Frontend especializado en la creación de código
+                    <p class="about__p">Hola, soy Shanti, programador Frontend y me especializo en la creación de código
                         desde cero para obtener experiencias altamente personalizadas.
                     </p>
                     <p class="about__p">Antes de estudiar programación, he trabajado en distintos sectores, como la
                         hostelería, el fitness y en ventas (B2C & B2B), lo que me ha proporcionado una gran flexibilidad
                         y capacidad de adaptación.
                     </p>
-                    <p class="about__p">Mi pasión por el deporte fue el desencadenante que me impulsó a formarme en
-                        programación, ya que tengo un mini-proyecto personal relacionado con el fitness, el cual me
-                        llevó a querer aprender a programar mi propia web.
-                    </p>
                     <p class="about__p">Mi interés por el marketing y la digitalización de negocios me motiva
                         constantemente a seguir formándome y explorando nuevas oportunidades en esta disciplina en
                         constante evolución.
                     </p>
-                    <p class="about__p">Si buscas a alguien dispuesto a afrontar nuevos desafíos y contribuir al éxito de
+                    <p class="about__p">Si buscas a alguien dispuesto a afrontar nuevos desafíos y contribuir al éxito
+                        de
                         tu proyecto, ¡no dudes en contactarme!
                     </p>
                 </div>
-                <img src="assets/shanti_img.webp" alt="Foto de Shanti" class="about__img">
+                <img src="assets/shanti_img.webp" alt="Foto de Shanti" class="about__img" loading="lazy">
             </div>
         </section>
 

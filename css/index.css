@@ -10,53 +10,76 @@ index.css
 ------------- * */
 
 /* ---- Reset CSS ---- */
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
     font-size: 100%;
 }
-body{
+
+body {
     font-family: 'League Spartan', Helvetica, Arial, sans-serif;
     font-weight: 600;
     font-size: 1.25em;
-    line-height: 24px;
+    line-height: 1.5rem;
     color: white;
     background-color: #2A2D34;
 }
-li{
+
+li {
     list-style: none;
 }
-h1 , h2 , h3 , h4 , h5 , h6 , p{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     font-weight: inherit;
     font-size: inherit;
     font-style: normal;
 }
-a{
+
+a {
     display: block;
     color: inherit;
     text-decoration: none;
 }
-img , svg , video , iframe , picture{
+
+img,
+svg,
+video,
+iframe,
+picture {
     display: block;
     width: 100%;
     max-width: 100%;
 }
-form , input , textarea , option , label , button{
+
+form,
+input,
+textarea,
+option,
+label,
+button {
     display: block;
     font-size: 1em;
     font-family: inherit;
     background-color: transparent;
 }
+
 /* ---- Reset CSS ---- */
 
 /* ---- ANIMACIÓN DEL BACKGROUND ---- */
 /* Descripción: Estilos para la animación de fondo de la web */
-.circulos{
+.circulos {
     width: 100%;
     height: 100%;
     background-color: #2A2D34;
@@ -66,12 +89,14 @@ form , input , textarea , option , label , button{
     left: 0;
     z-index: -1;
 }
-.circulo{
+
+.circulo {
     width: 20%;
     height: 20%;
-    border: 50px solid #7D53DE;
+    border: 3.125rem solid #7D53DE;
     border-radius: 50%;
-    filter: blur(3rem); /*Nos permite desenfocar los círculos*/
+    filter: blur(3rem);
+    /*Nos permite desenfocar los círculos*/
 
     position: absolute;
     top: 40%;
@@ -79,28 +104,48 @@ form , input , textarea , option , label , button{
 
     animation: expand 60s linear infinite both;
 }
-.blue{
-    border: 50px solid #009DDC;
+
+.blue {
+    border: 3.125rem solid #009DDC;
 
     animation: expandblue 60s linear infinite both;
 }
+
 /* ---- ANIMACIÓN DEL BACKGROUND ---- */
+
+/* ---- Modificación de la barra de scroll ---- */
+body::-webkit-scrollbar {
+    /*Define el ancho de la barra de scroll*/
+    width: .875rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    /*Define el color del pulgar del scroll*/
+    background-color: #009edc70;
+
+    border-radius: .625rem;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #009edc;
+}
+
+/* ---- Modificación de la barra de scroll ---- */
 
 
 /* ---- CABECERA DE LA WEB ---- */
 /* Descripción: Estilos para la cabecera de la web
    Estructura:
    - header__h1: Logo
-   - header__btn: Burguer icon para la versión móvil
+   - burger__btn: Burguer icon para la versión móvil
    - header__menu: Contiene tanto el nav como las redes sociales */
-.header{
-    width: 95%;
+.header {
     background-color: rgba(0, 0, 0, 0.6);
-    margin: 1rem auto;
+    margin: 1rem auto 0;
 
     padding: 1.5rem 3rem;
 
-    border-radius: 26px;
+    border-radius: 1.625rem;
     border: 2px solid rgb(0, 0, 0);
 
 
@@ -108,15 +153,18 @@ form , input , textarea , option , label , button{
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+
+    animation: expansion 2s ease 1 forwards;
+
+    overflow: hidden;
 }
-.header__h1{
-    /* background-color: orange; */
-}
-.header__btn{ /*Este es el botón que aparecerá en la versión móvil y nos permitirá acceder al menú*/
+
+.burger__btn {
+    /*Este es el botón que aparecerá en la versión móvil y nos permitirá acceder al menú*/
     width: 3.5rem;
     height: 3.5rem;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 8px;
+    padding: .5rem;
 
     box-shadow: 0 0 2rem rgba(255, 255, 255, 0.3);
 
@@ -133,7 +181,11 @@ form , input , textarea , option , label , button{
 
     z-index: 2;
 }
-.header__bar, .header__btn::after, .header__btn::before{ /*El uso de estos pseudo elementos, nos permite crear dos barras adicionales a la contenida en el botón */
+
+.burger__bar,
+.burger__btn::after,
+.burger__btn::before {
+    /*El uso de estos pseudo elementos, nos permite crear dos barras adicionales a la contenida en el botón */
     content: '';
     display: block;
 
@@ -141,23 +193,27 @@ form , input , textarea , option , label , button{
     height: 4px;
     background-color: rgb(207, 199, 199);
 
-    margin: 6px 0;
+    margin: .375rem 0;
 
     transition: all .4s ease;
 }
+
 /* Estos transition nos permiten hacer desaparecer la barra de en medio y hacer que las dos restantes se crucen formando una X cuando
 se le añade la clase active al botón a través de JS 
 */
-.header__btn.active::before{
-    transform: rotate(-45deg) translate(-8px, 7px);
+.burger__btn.active::before {
+    transform: rotate(-45deg) translate(-0.5rem, .4375rem);
 }
-.header__btn.active::after{
-    transform: rotate(45deg) translate(-7px, -7px);
+
+.burger__btn.active::after {
+    transform: rotate(45deg) translate(-0.4375rem, -0.4375rem);
 }
-.header__btn.active .header__bar{
+
+.burger__btn.active .burger__bar {
     opacity: 0;
 }
-.header__menu{
+
+.header__menu {
     width: calc((100% / 3) * 2);
     /* background-color: bisque; */
 
@@ -166,41 +222,44 @@ se le añade la clase active al botón a través de JS
     justify-content: space-between;
     align-items: center;
 }
-.header__nav{
-    /* background-color: red; */
-}
-.header__ul{
+
+.header__ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
 }
-.header__li{
+
+.header__li {
     /* background-color: greenyellow; */
-    color: rgb(207, 199, 199);
-    
+    color: white;
+
     transition: color .5s ease;
 }
-.header__li:hover{ 
-    color: white;
+
+.header__li:hover {
+    color: #009DDC;
 }
-.header__li::after{
+
+.header__li::after {
     content: '';
     display: block;
     width: 0;
     height: 2px;
-    background-color: rgb(207, 199, 199);
+    background-color: white;
 
     transition: width .5s ease;
 }
-.header__li:hover.header__li::after{
+
+.header__li:hover.header__li::after {
     width: 100%;
-    background-color: white;
+    background-color: #009DDC;
 }
+
 /*Este pseudo-elemento nos permite crear una animación en la barra de navegación de la web,
 al pasar el ratón por encima de los distintos enlaces */
-.header__rrss{
+.header__rrss {
     /* background-color: blueviolet; */
 
     display: flex;
@@ -209,19 +268,20 @@ al pasar el ratón por encima de los distintos enlaces */
     align-items: center;
     gap: 1rem;
 }
-.rrss__li{
-    /* background-color: greenyellow; */
-}
-.rrss__svg{
+
+.rrss__svg {
     width: 1.7rem;
     height: 1.7rem;
     color: white;
 
-    transition: transform .5s ease;
+    transition: all .5s ease;
 }
-.rrss__svg:hover{
+
+.rrss__svg:hover {
     transform: scale(1.1);
+    color: #009DDC;
 }
+
 /*Este pseudo-elemento nos permite crear una animación en los iconos de las redes sociales,
 al pasar el ratón por encima de estos */
 /* ---- CABECERA DE LA WEB ---- */
@@ -231,21 +291,32 @@ al pasar el ratón por encima de estos */
 /* Descripción: Estilos para el hero de la web
    Estructura:
    - El hero__wrapper nos permite agrupar todo el texto, a este posteriormente le aplico un position:absolute para desplazarlo arriba a la izquierda */
-.hero{
+.hero {
     width: 100%;
     min-height: 75vh;
     /* background-color: grey; */
 
     position: relative;
+
+    cursor: none;
+    /*Para que el cursor vanilla desaparezca en esta sección y podamos usar uno personalizado */
+
+    overflow: hidden;
 }
-.hero__wrapper{
+
+.noanchor {
+    display: none;
+}
+
+.hero__wrapper {
     /* background-color: orange; */
 
     position: absolute;
     top: 20%;
     left: 10%;
 }
-.hero__span{
+
+.hero__span {
     /* background-color: grey; */
     font-family: 'Libre Baskerville', serif;
     font-size: 1.8em;
@@ -254,17 +325,55 @@ al pasar el ratón por encima de estos */
     display: block;
 
     margin: 0 0 1rem;
+
+    animation: slideleft 1s ease .5s 1 both;
 }
-.hero__h2{
+
+.hero__h2 {
     /* background-color: aqua; */
     font-size: 8em;
     font-weight: 600;
     line-height: 8rem;
+
+    animation: fadein 1.5s ease .5s 1 both;
 }
-.front{}
-.dev{ /*Este translate nos permite desplazar la palabra "developer" hacia la derecha*/
+
+.dev {
+    /*Este translate nos permite desplazar la palabra "developer" hacia la derecha*/
     transform: translateX(30%);
 }
+
+/* ---- Cursor personalizado ---- */
+.pointer {
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: rgba(0, 0, 0, .8);
+
+    border: 2px solid black;
+    border-radius: 50%;
+
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.3);
+
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pointer.isActive {
+    display: flex;
+}
+
+.pointer__span {
+    font-size: 1rem;
+}
+
+/* ---- Cursor personalizado ---- */
+
 /* ---- HERO ---- */
 
 
@@ -276,15 +385,15 @@ al pasar el ratón por encima de estos */
    - proyectos__grid es la caja con display grid que contiene todos los proyectos
    - proyectos__wrapper hace referencia a cada proyecto individual, en su interior tenemos el enlace al proyecto que a su vez contiene el
    título y la imágen  */
-.proyectos{
+.proyectos {
     width: 95%;
     background-color: rgba(0, 0, 0, 0.6);
-    margin: 1rem auto;
-    
-    border-radius: 26px;
+    margin: 0 auto 1rem;
+
+    border-radius: 1.625rem;
 
     border: 2px solid rgb(0, 0, 0);
-    
+
     padding: 2rem;
 
     display: flex;
@@ -292,19 +401,23 @@ al pasar el ratón por encima de estos */
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1rem;
+
+    animation: slideup 1.5s ease 1 both;
 }
-.proyectos__h2{
+
+.proyectos__h2 {
     width: 90%;
-    max-width: 1500px;
+    max-width: 93.75rem;
     /* background-color: aqua; */
     margin: 0 auto;
 
     font-size: 1.5em;
     font-weight: 600;
 }
-.proyectos__p{
+
+.proyectos__p {
     width: 90%;
-    max-width: 1500px;
+    max-width: 93.75rem;
     /* background-color: grey; */
     margin: 0 auto;
 
@@ -312,22 +425,22 @@ al pasar el ratón por encima de estos */
     font-size: .8em;
     font-weight: 400;
 }
-.proyectos__grid{
+
+.proyectos__grid {
     width: 90%;
-    max-width: 1500px;
+    max-width: 93.75rem;
     /* background-color: bisque; */
     margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     /* El uso del repeat con auto-fit nos permite hacer un diseño más responsive, ahorrando en suo de @medias*/
     gap: 2rem;
 }
-.proyectos__wrapper{
+
+.proyectos__wrapper {
     width: 100%;
-    max-width: 450px;
-    min-height: 200px;
-    background-color: coral;
+    max-width: 28.125rem;
 
     margin: auto;
 
@@ -335,7 +448,8 @@ al pasar el ratón por encima de estos */
 
     overflow: hidden;
 }
-.proyectos__a::before{
+
+.proyectos__a::before {
     content: '';
     display: block;
     width: 100%;
@@ -352,30 +466,34 @@ al pasar el ratón por encima de estos */
 
     transition: all .5s ease;
 }
-.proyectos__wrapper:hover .proyectos__a::before{
+
+.proyectos__wrapper:hover .proyectos__a::before {
     transform: translateX(0);
 }
-.proyectos__a{}
-.proyectos__img{
+
+.proyectos__img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
 }
-.proyectos__h3{
+
+.proyectos__h3 {
     font-size: 1.5rem;
 
     opacity: 0;
 
     position: absolute;
-    left: 25px;
-    bottom: 20px;
+    left: 1.5625rem;
+    bottom: 1.25rem;
 
     transition: all .5s ease;
 }
-.proyectos__wrapper:hover .proyectos__h3{
+
+.proyectos__wrapper:hover .proyectos__h3 {
     opacity: 1;
     transform: scale(1.1);
 }
+
 /* ---- PROYECTOS ---- */
 
 
@@ -386,25 +504,27 @@ al pasar el ratón por encima de estos */
      monitores más grandes
     - about__info engloba tanto el titular (about__h2) de la sección, como el párrafo descriptivo (about__p)
     - about__img contiene una fotografia*/
-.about{
+.about {
     width: 100%;
     /* background-color: bisque; */
 
     padding: 2rem;
 }
-.about__wrapper{
+
+.about__wrapper {
     width: 90%;
-    max-width: 1500px;
+    max-width: 93.75rem;
     /* background-color: grey; */
     margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(450px , 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(28.125rem, 1fr));
     /* AQUI ESTOY USANDO AUTO-FIT PRO PRIMERA VEZ, PARA AHORRAR @MEDIA
        PROBARLO Y VER QUE TAL FUNCIONA, SINO PONER repeat(4 , 1fr) */
     gap: 10rem;
 }
-.about__info{
+
+.about__info {
     /* background-color: violet; */
     margin: auto;
 
@@ -414,21 +534,25 @@ al pasar el ratón por encima de estos */
     align-items: flex-start;
     gap: 1rem;
 }
-.about__h2{
+
+.about__h2 {
     /* background-color: red; */
     font-size: 1.5em;
 }
-.about__p{
+
+.about__p {
     /* background-color: greenyellow; */
     font-family: 'Libre Baskerville', serif;
     font-size: .8em;
     font-weight: 400;
 }
-.about__img{
-    max-width: 800px;
+
+.about__img {
+    max-width: 50rem;
     /* background-color: azure; */
     margin: auto;
 }
+
 /* ---- SOBRE MI ---- */
 
 
@@ -438,7 +562,7 @@ al pasar el ratón por encima de estos */
    - footer__h4 con el titular del footer
    - footer__p con una invitación a que el usuario me contacte y tiene en su interior unos enlaces tanto a mi correo como al formulario de contacto
    - footer__rrss es la sección de redes sociales */
-.footer{
+.footer {
     width: 95%;
     background-color: rgba(0, 0, 0, 0.6);
 
@@ -446,7 +570,7 @@ al pasar el ratón por encima de estos */
 
     margin: 1rem auto;
 
-    border-radius: 26px;
+    border-radius: 1.625rem;
     border: 2px solid rgb(0, 0, 0);
 
     display: flex;
@@ -455,69 +579,87 @@ al pasar el ratón por encima de estos */
     align-items: center;
     gap: 1rem;
 }
-.footer__h4{
+
+.footer__h4 {
     /* background-color: aqua; */
     font-size: 1.2em;
 }
-.footer__p{
+
+.footer__p {
     /* background-color: orange; */
     text-align: center;
     font-family: 'Libre Baskerville', serif;
     font-size: .8em;
     font-weight: 400;
 }
-.footer__a{
+
+.footer__a {
     display: inline;
     text-decoration: underline;
 }
-.footer__rrss{
+
+.footer__rrss {
     /* background-color: violet; */
-    
+
     margin: 1rem 0 0;
-    
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
-.rrss__li{}
-.rrss__a{}
+
 /* ---- FOOTER ---- */
 
-
 /* ---- @MEDIAs ---- */
-@media (max-width: 1241px){
-    .about__wrapper{/*Reduce el gap entre los elementos del about__wrapper*/
+@media (max-width: 77.5625rem) {
+    .about__wrapper {
+        /*Reduce el gap entre los elementos del about__wrapper*/
         gap: 3rem;
     }
 }
-@media (max-width: 1117px){
-    .about__img{/*Ajusta el tamaño de la imágen respecto a la pantalla*/
+
+@media (max-width: 69.8125rem) {
+    .about__img {
+        /*Ajusta el tamaño de la imágen respecto a la pantalla*/
         width: 60%;
     }
 }
-@media (max-width: 1100px){
-    .hero__wrapper{/*Ajusta el position del hero__wrapper respecto a la pantalla*/
+
+@media (max-width: 68.75rem) {
+    .hero__wrapper {
+        /*Ajusta el position del hero__wrapper respecto a la pantalla*/
         top: 33%;
         font-size: .7em;
     }
-    .hero__h2{/*Ajusta el interlineado del titular debido a su tamaño reducido*/
+
+    .hero__h2 {
+        /*Ajusta el interlineado del titular debido a su tamaño reducido*/
         line-height: .8em;
     }
 }
-@media (max-width: 870px){
-    .header{/*Añade wrap al headder, para que el logo quede centrado y el header__menu pase por debajo, aunque por defcto no se verá hasta que no se active el JS*/
+
+@media (max-width: 54.375rem) {
+    body::-webkit-scrollbar {
+        /* Reducimos el ancho de la barra de scroll, para la versión móvil */
+        width: .5rem;
+    }
+
+    .header {
+        /*Añade wrap al headder, para que el logo quede centrado y el header__menu pase por debajo, aunque por defcto no se verá hasta que no se active el JS*/
         flex-flow: row wrap;
         justify-content: center;
     }
-    .header__menu{ /*Es el menú que se desplegará en la versión móvil*/
+
+    .header__menu {
+        /*Es el menú que se desplegará en la versión móvil*/
         width: 100%;
         min-height: 100vh;
         background-color: rgba(0, 0, 0, 0.8);
         padding: 25vh 0;
 
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(.625rem);
 
         transform: scale(1.5);
 
@@ -538,126 +680,228 @@ al pasar el ratón por encima de estos */
 
         transition: all .5s ease;
     }
-    .header__btn{ /*Hace que el botón sea visible en móvil*/
+
+    .burger__btn {
+        /*Hace que el botón sea visible en móvil*/
         display: block;
     }
-    .header__menu.active{
+
+    .header__menu.active {
         opacity: 1;
         pointer-events: auto;
         transform: scale(1);
     }
-    .header__ul{ /*Cambia la dirección del menú de horizontal a columna*/
+
+    .header__ul {
+        /*Cambia la dirección del menú de horizontal a columna*/
         flex-flow: column nowrap;
         gap: 2.5rem;
     }
-    .header__rrss{
+
+    .header__rrss {
         flex-flow: column nowrap;
         gap: 1.5rem;
     }
-    .header .rrss__svg{
+
+    .header .rrss__svg {
         width: 2rem;
         height: 2rem;
     }
+
+    /*En la versión móvil, quitamos el hero original y lo sustituimos por una etiqueta hero que en lugar de un <a> es un <div> y sin puntero personalizado*/
+    .hero {
+        display: none;
+    }
+
+    .noanchor {
+        display: block;
+        cursor: auto;
+    }
+
+    .proyectos__wrapper {
+        border-radius: .3125rem;
+    }
+
+    .proyectos__cta {
+        display: inline;
+    }
 }
-@media (max-width: 768px){ /*Estos cambios adaptan el tamaño de diversos elementos a pantallas con menor resolución*/
-    .hero{
+
+@media (max-width: 48rem) {
+
+    /*Estos cambios adaptan el tamaño de diversos elementos a pantallas con menor resolución*/
+    .hero {
         min-height: 60vh;
     }
-    .hero__span{
+
+    .hero__span {
         font-size: 1.5em;
         margin: 0 0 .5rem;
     }
-    .hero__h2{
+
+    .hero__h2 {
         font-size: 6em;
         line-height: 4.2rem;
     }
-    .footer{
+
+    .footer {
         padding: 2rem 2rem 4rem;
     }
 }
-@media (max-width: 600px){ /*Estos cambios adaptan el tamaño de diversos elementos a pantallas con menor resolución*/
-    .hero{
+
+@media (max-width: 37.5rem) {
+
+    /*Estos cambios adaptan el tamaño de diversos elementos a pantallas con menor resolución*/
+    .hero {
         min-height: 50vh;
     }
-    .hero__span{
+
+    .hero__span {
         font-size: 1.3em;
         margin: 0 0 .5rem;
     }
-    .hero__h2{
+
+    .hero__h2 {
         font-size: 4em;
         line-height: 3rem;
     }
-    .about__img{
-        width: 240px;
+
+    .about__img {
+        width: 15rem;
     }
 }
-@media (max-width: 580px){
-    .about__wrapper{
-        grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+
+@media (max-width: 36.25rem) {
+    .about__wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     }
 }
-@media (max-width: 420px){
-    .hero{
+
+@media (max-width: 26.25rem) {
+    .hero {
         min-height: 40vh;
     }
-    .dev{
+
+    .dev {
         transform: translateX(0);
     }
-    .proyectos__grid, .about__wrapper{
-        grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));
+
+    .proyectos__grid,
+    .about__wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
 
     }
 }
+
 /* ---- @MEDIAs ---- */
 
 /* ---- KEYFRAMEs ---- */
-@keyframes expand{
+@keyframes expand {
+
     /* Esta animación hacer referencia al circulo violeta, haciendo que empiece pequeño y se vaya expandiendo */
-    0%{
+    0% {
         width: 20%;
         height: 20%;
-    
+
         top: 40%;
-        left: 40%;    
+        left: 40%;
     }
-    50%{
+
+    50% {
         width: 100%;
         height: 100%;
-    
+
         top: 0%;
-        left: 0%;    
+        left: 0%;
     }
-    100%{
+
+    100% {
         width: 20%;
         height: 20%;
-    
+
         top: 40%;
-        left: 40%;    
+        left: 40%;
     }
+
     /* Trabajar en porcentajes, junto al "infinite" del animation, permite hacer que la animación ocurra en bucle sin interrupciones */
 }
-@keyframes expandblue{
-        /* Esta animación hacer referencia al circulo azul, haciendo que empiece grande y se vaya contrayendo */
-    0%{
+
+@keyframes expandblue {
+
+    /* Esta animación hacer referencia al circulo azul, haciendo que empiece grande y se vaya contrayendo */
+    0% {
         width: 100%;
         height: 100%;
-    
+
         top: 0%;
-        left: 0%;   
+        left: 0%;
     }
-    50%{
+
+    50% {
         width: 20%;
         height: 20%;
-    
+
         top: 40%;
-        left: 40%;     
+        left: 40%;
     }
-    100%{
+
+    100% {
         width: 100%;
         height: 100%;
-    
+
         top: 0%;
-        left: 0%;   
+        left: 0%;
     }
 }
+
+@keyframes expansion {
+
+    /*Esta animación hacer referencia al header, para que al cargar la web se vaya expandiendo desde el centro*/
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+
+    to {
+        width: 95%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideleft {
+
+    /*Esta animación hacer referencia al nombre "Shanti Meldoli", para que al cargar la web aparezca deslizandose desde la izquierda en el hero*/
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadein {
+
+    /*Esta animación hacer referencia tanto a los elementos del header como para el texto "Frontend Developer" del hero, para que al cargar la web aparezcan poco a poco*/
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideup {
+
+    /*Esta animación hacer referencia a la sección proyectos, para que al cargar la web dicha sección aparezca desde abajo*/
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
 /* ---- KEYFRAMEs ---- */
