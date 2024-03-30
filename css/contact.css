@@ -86,7 +86,7 @@ button {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
 }
 
 .circulo {
@@ -112,23 +112,176 @@ button {
 
 /* ---- ANIMACIÓN DEL BACKGROUND ---- */
 
-/* ---- HEADER CON ENLACE PARA EL INICIO ---- */
-/* Descripción: Estilos para el header que contiene el logo de la web */
-.header {
-    width: 100%;
-    /* background-color: aqua; */
+/* ---- Modificación de la barra de scroll ---- */
+body::-webkit-scrollbar {
+    /*Define el ancho de la barra de scroll*/
+    width: .875rem;
+}
 
-    padding: 1rem;
+body::-webkit-scrollbar-thumb {
+    /*Define el color del pulgar del scroll*/
+    background-color: #009edc70;
+
+    border-radius: .625rem;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #009edc;
+}
+/* ---- Modificación de la barra de scroll ---- */
+
+/* ---- CABECERA DE LA WEB ---- */
+/* Descripción: Estilos para la cabecera de la web
+   Estructura:
+   - header__h1: Logo
+   - burger__btn: Burguer icon para la versión móvil
+   - header__menu: Contiene tanto el nav como las redes sociales */
+.header {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 1rem auto 0;
+
+    padding: 1.5rem 3rem;
+
+    border-radius: 1.625rem;
+    border: 2px solid rgb(0, 0, 0);
+
 
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    animation: expansion 2s ease 1 forwards;
+
+    overflow: hidden;
 }
 
-.home {
-    /* background-color: grey; */
-    margin: auto;
+.burger__btn {
+    /*Este es el botón que aparecerá en la versión móvil y nos permitirá acceder al menú*/
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: .5rem;
+
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.3);
+
+    display: none;
+
+    cursor: pointer;
+    border-radius: 50%;
+
+    border: 2px solid black;
+
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+
+    z-index: 1;
 }
 
-/* ---- HEADER CON ENLACE PARA EL INICIO ---- */
+.burger__bar,
+.burger__btn::after,
+.burger__btn::before {
+    /*El uso de estos pseudo elementos, nos permite crear dos barras adicionales a la contenida en el botón */
+    content: '';
+    display: block;
+
+    width: 100%;
+    height: 4px;
+    background-color: rgb(207, 199, 199);
+
+    margin: .375rem 0;
+
+    transition: all .4s ease;
+}
+
+/* Estos transition nos permiten hacer desaparecer la barra de en medio y hacer que las dos restantes se crucen formando una X cuando
+se le añade la clase active al botón a través de JS 
+*/
+.burger__btn.active::before {
+    transform: rotate(-45deg) translate(-0.5rem, .4375rem);
+}
+
+.burger__btn.active::after {
+    transform: rotate(45deg) translate(-0.4375rem, -0.4375rem);
+}
+
+.burger__btn.active .burger__bar {
+    opacity: 0;
+}
+
+.header__menu {
+    width: calc((100% / 3) * 2);
+    /* background-color: bisque; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__li {
+    /* background-color: greenyellow; */
+    color: white;
+
+    transition: color .5s ease;
+}
+
+.header__li:hover {
+    color: #009DDC;
+}
+
+.header__li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+
+    transition: width .5s ease;
+}
+
+.header__li:hover.header__li::after {
+    width: 100%;
+    background-color: #009DDC;
+}
+
+/*Este pseudo-elemento nos permite crear una animación en la barra de navegación de la web,
+al pasar el ratón por encima de los distintos enlaces */
+.header__rrss {
+    /* background-color: blueviolet; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rrss__svg {
+    width: 1.7rem;
+    height: 1.7rem;
+    color: white;
+
+    transition: all .5s ease;
+}
+
+.rrss__svg:hover {
+    transform: scale(1.1);
+    color: #009DDC;
+}
+
+/*Este pseudo-elemento nos permite crear una animación en los iconos de las redes sociales,
+al pasar el ratón por encima de estos */
+/* ---- CABECERA DE LA WEB ---- */
 
 /* ---- FORMULARIO ---- */
 /* Descripción: Estilos para el header que contiene el logo de la web 
@@ -285,6 +438,75 @@ button {
     }
 }
 
+@media (max-width: 54.375rem) {
+    body::-webkit-scrollbar {
+        /* Reducimos el ancho de la barra de scroll, para la versión móvil */
+        width: .5rem;
+    }
+
+    .header {
+        /*Añade wrap al headder, para que el logo quede centrado y el header__menu pase por debajo, aunque por defcto no se verá hasta que no se active el JS*/
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .header__menu {
+        /*Es el menú que se desplegará en la versión móvil*/
+        width: 100%;
+        min-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 25vh 0;
+
+        backdrop-filter: blur(.625rem);
+
+        transform: scale(1.5);
+
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        gap: 3rem;
+
+        font-size: 1.5em;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        z-index: 1;
+
+        opacity: 0;
+        pointer-events: none;
+
+        transition: all .5s ease;
+    }
+
+    .burger__btn {
+        /*Hace que el botón sea visible en móvil*/
+        display: block;
+    }
+
+    .header__menu.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1);
+    }
+
+    .header__ul {
+        /*Cambia la dirección del menú de horizontal a columna*/
+        flex-flow: column nowrap;
+        gap: 2.5rem;
+    }
+
+    .header__rrss {
+        flex-flow: column nowrap;
+        gap: 1.5rem;
+    }
+
+    .header .rrss__svg {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
 @media (max-width: 48rem) {
     .section {
         /*Cambia el orden de los elementos de filas a columnas*/
@@ -369,6 +591,19 @@ button {
 
         top: 0%;
         left: 0%;
+    }
+}
+@keyframes expansion {
+
+    /*Esta animación hacer referencia al header, para que al cargar la web se vaya expandiendo desde el centro*/
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+
+    to {
+        width: 95%;
+        opacity: 1;
     }
 }
 

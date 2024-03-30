@@ -87,7 +87,7 @@ button {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
 }
 
 .circulo {
@@ -148,7 +148,6 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 1.625rem;
     border: 2px solid rgb(0, 0, 0);
 
-
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -179,7 +178,7 @@ body::-webkit-scrollbar-thumb:hover {
     bottom: 2rem;
     right: 2rem;
 
-    z-index: 2;
+    z-index: 1;
 }
 
 .burger__bar,
@@ -302,6 +301,7 @@ al pasar el ratón por encima de estos */
     /*Para que el cursor vanilla desaparezca en esta sección y podamos usar uno personalizado */
 
     overflow: hidden;
+    z-index: 0;
 }
 
 .noanchor {
@@ -403,6 +403,10 @@ al pasar el ratón por encima de estos */
     gap: 1rem;
 
     animation: slideup 1.5s ease 1 both;
+
+    position: relative;
+
+    z-index: -1;
 }
 
 .proyectos__h2 {
@@ -505,10 +509,9 @@ al pasar el ratón por encima de estos */
     - about__info engloba tanto el titular (about__h2) de la sección, como el párrafo descriptivo (about__p)
     - about__img contiene una fotografia*/
 .about {
-    width: 100%;
+    width: 95%;
     /* background-color: bisque; */
-
-    padding: 2rem;
+    margin: auto;
 }
 
 .about__wrapper {
@@ -516,6 +519,8 @@ al pasar el ratón por encima de estos */
     max-width: 93.75rem;
     /* background-color: grey; */
     margin: auto;
+
+    padding: 2rem;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28.125rem, 1fr));
@@ -716,6 +721,8 @@ al pasar el ratón por encima de estos */
     .noanchor {
         display: block;
         cursor: auto;
+        position: relative;
+        z-index: -1; /* Para que el menú móvil aparezca por encima del hero */
     }
 
     .proyectos__wrapper {
@@ -882,7 +889,7 @@ al pasar el ratón por encima de estos */
 
 @keyframes fadein {
 
-    /*Esta animación hacer referencia tanto a los elementos del header como para el texto "Frontend Developer" del hero, para que al cargar la web aparezcan poco a poco*/
+    /*Esta animación hacer referencia al texto "Frontend Developer" del hero, para que al cargar la web aparezcan poco a poco*/
     from {
         opacity: 0;
     }
