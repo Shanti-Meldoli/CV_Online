@@ -13,7 +13,7 @@ Estructura general:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shanti Meldoli - Frontend Developer</title>
+    <title>Shanti Meldoli - Currículum Online</title>
 
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js" defer></script>
@@ -46,7 +46,7 @@ Estructura general:
     <header class="header">
         <h1 class="header__h1">
             <!--El h1 contiene dentro el logo de la web con un <a> que lleva a la página de inicio-->
-            <a href="#inicio" class="header__a" title="logo">
+            <a href="index.html" class="header__a" title="logo">
                 <img src="assets/sm_logo.svg" alt="Logo" height="30" width="30">
             </a>
         </h1>
@@ -55,13 +55,16 @@ Estructura general:
             <nav class="header__nav">
                 <ul class="header__ul">
                     <li class="header__li">
-                        <a class="header__a" href="#inicio" title="Inicio">Inicio</a>
-                    </li>
-                    <li class="header__li">
-                        <a class="header__a" href="#proyectos" title="Proyectos">Proyectos</a>
+                        <a class="header__a" href="index.html" title="Inicio">Inicio</a>
                     </li>
                     <li class="header__li">
                         <a class="header__a" href="#about" title="Sobre mi">Sobre mi</a>
+                    </li>
+                    <li class="header__li">
+                        <a class="header__a" href="ventas.html" title="Experiencia en Ventas">Ventas</a>
+                    </li>
+                    <li class="header__li">
+                        <a class="header__a" href="frontend.html" title="Experiencia en maquetación web">Frontend Development</a>
                     </li>
                     <li class="header__li">
                         <a class="header__a" href="contact.html" title="Contacto">Contacto</a>
@@ -110,9 +113,8 @@ Estructura general:
         <a href="contact.html" class="hero" title="Contact">
             <div class="hero__wrapper">
                 <span class="hero__span">Shanti Meldoli</span>
-                <h2 class="hero__h2 front">Frontend</h2>
-                <h2 class="hero__h2 dev">Developer</h2>
-                <!-- Frontend y Developer están colocados en dos h2 distintos, para poder aplicar un translate a Developer en CSS -->
+                <h2 class="hero__h2 cv">Currículum</h2>
+                <h2 class="hero__h2 online">Online</h2>
             </div>
             <div class="hero__pointer pointer"> <!--Este es un cursor personalizado-->
                 <span class="pointer__span">!Hablemos¡</span>
@@ -123,40 +125,10 @@ Estructura general:
             <!-- Este será el hero que se vea en móvil, sin el cursor personalizado y sin que sea un enlace a contact.html -->
             <div class="hero__wrapper">
                 <span class="hero__span">Shanti Meldoli</span>
-                <h2 class="hero__h2 front">Frontend</h2>
-                <h2 class="hero__h2 dev">Developer</h2>
-                <!-- Frontend y Developer están colocados en dos h2 distintos, para poder aplicar un translate a Developer en CSS -->
+                <h2 class="hero__h2 cv">Currículum</h2>
+                <h2 class="hero__h2 online">Online</h2>
             </div>
         </div>
-
-        <!-- SECCIÓN DE PROYECTOS, PONERLOS EN UN GRID, DARLE ALGUNA ANIMACIÓN Y PENSAR QUE MÁS 
-        Descripción: En esta sección tenemos una galeria de proyectos hecha con un display: grid
-        -->
-        <section class="proyectos" id="proyectos">
-            <h2 class="proyectos__h2">Proyectos</h2>
-            <p class="proyectos__p">Algunos de los proyectos que he estado desarrollando durante mi Master en Marketing
-                Digital y Diseño Web, utilizando los <strong>lenguajes fundamentales:</strong> HTML, CSS y JavaScript
-                nativo, y aplicando
-                la <strong>metodología BEM</strong> para garantizar una estructura eficiente y mantenible. </p>
-            <div class="proyectos__grid">
-                <article class="proyectos__wrapper">
-                    <a href="https://github.com/Shanti-Meldoli/Copycat_Ark-Shelter" class="proyectos__a"
-                        title="Ark-Shelter" target="_blank" rel="noreferrer">
-                        <img src="assets/ark_shelter_cover.webp" alt="Imagen Ark-Shelter" class="proyectos__img"
-                            loading="lazy">
-                        <h3 class="proyectos__h3">Copycat Ark-Shelter</h3>
-                    </a>
-                </article>
-                <article class="proyectos__wrapper">
-                    <a href="https://github.com/Shanti-Meldoli/Copycat_Stockholm_70" class="proyectos__a"
-                        title="Stockholm70" target="_blank" rel="noreferrer">
-                        <img src="assets/stockholm_cover.webp" alt="Imagen Stockholm70" class="proyectos__img"
-                            loading="lazy">
-                        <h3 class="proyectos__h3">Copycat Stockholm70</h3>
-                    </a>
-                </article>
-            </div>
-        </section>
 
         <!-- SECCIÓN DE ABOUT
         Descripción: Esta sección contiene algo de información sobre mi y una fotografía.
@@ -165,26 +137,96 @@ Estructura general:
             <div class="about__wrapper">
                 <div class="about__info">
                     <h2 class="about__h2">Sobre mi</h2>
-                    <p class="about__p">Hola, soy Shanti, programador Frontend y me especializo en la creación de código
-                        desde cero para obtener experiencias altamente personalizadas.
+                    <p class="about__p">Hola, soy Shanti y este Currículum Online es mi proyecto del módulo de
+                        desarrollo Frontend de mi Máster en Marketing Digital y Diseño Web. <br>Voy a intentar no
+                        extenderme demasiado, estámos en la época de la inmediatez y no quiero que te aburras.
                     </p>
-                    <p class="about__p">Antes de estudiar programación, he trabajado en distintos sectores, como la
-                        hostelería, el fitness y en ventas (B2C & B2B), lo que me ha proporcionado una gran flexibilidad
-                        y capacidad de adaptación.
+                    <p class="about__p">A lo largo de mi carrera he tocado distintos sectores, empezando por la
+                        hostelería al terminar de estudiar bachillerato ya
+                        que no tenía muy claro que quería hacer con mi vida.
                     </p>
-                    <p class="about__p">Mi interés por el marketing y la digitalización de negocios me motiva
-                        constantemente a seguir formándome y explorando nuevas oportunidades en esta disciplina en
-                        constante evolución.
+                    <p class="about__p">Con la pandemia en el 2020 me encontré con una mano delante y otra detrás sin
+                        apenas ahorros y tuve que dar un cambio, quería montarme mi proyecto personal como entrenador
+                        personal online, pero no tenía ni idea de como funciona un negocio y mucho menos de cómo
+                        diferenciarme de la gran competencia que hay en este sector.
+                    </p>
+                    <p class="about__p">Esto me llevó a decidir estudiar un Ciclo Superior en Marketing y Publicidad
+                        para poder tener una mínima idea de cómo el mundo de la empresa funciona sin tener que empezar
+                        una carrera como ADE.
+                    </p>
+                    <p class="about__p">A la vez que estudiaba empecé a trabajar en un Contact Center para poder pagarme
+                        los estudios y mis gastos personales, esta experiencia me introdujo al arte de la venta (en este
+                        caso B2C). Después de esto me mudé de Fuerteventura (las queridas Islas Canarias) a Barcelona
+                        para buscar nuevas experiencias.
+                    </p>
+                    <p class="about__p">En Barcelona tuve la oportunidad de adentrarme en el sector de las ventas B2B y
+                        tener la gran suerte de colaborar estrechamente con Google trabajando en Teleperformance en la
+                        adquisición de nuevos clientes para su plataforma de Google Ads.
+                    </p>
+                    <p class="about__p">Durante este tiempo terminé mis estudios en Marketing y Publicidad, pero como
+                        soy una persona que no sabe aburrirse decidí empezar un Máster en Marketing Digital y Diseño Web
+                        (el motivo de que exista esta página).
+                    </p>
+                    <p class="about__p">Llegando al presente, estoy a punto de terminar mi Máster y recientemente he
+                        empezado a trabajar junto a Qonto, la banca digital para empresas, en la adquisición de nuevos
+                        clientes en España.
+                    </p>
+                    <p class="about__p">En estos momentos me estoy dedicando 100% al sector de las ventas con el
+                        objetivo a largo plazo de aplicar mis conocimientos adquiridos tanto en los estudios, como a
+                        través de mis experiencias profesionales en la creación mi propio proyecto que en estos momentos
+                        es más bien un “side hustle”. <br>Si quieres saber más sobre mi proyecto personal puedes visitar:
+                        <a href="https://nomad-movement.com/" class="about__a" title="Web Nomad Movement"
+                            target="_blank" rel="noreferrer">nomad-movement.com</a>
                     </p>
                     <p class="about__p">Si buscas a alguien dispuesto a afrontar nuevos desafíos y contribuir al éxito
-                        de
-                        tu proyecto, ¡no dudes en contactarme!
+                        de tu proyecto, ¡no dudes en contactarme!
                     </p>
                 </div>
                 <img src="assets/shanti_img.webp" alt="Foto de Shanti" class="about__img" loading="lazy">
             </div>
         </section>
 
+        <!-- SECCIÓN DE Experiencias
+        Descripción: Esta sección contiene una breve introducción a mis experiencias en Ventas, Frontend Developmente y Marketing Digital a
+        partir de las cuales se podrá ir a la página dedicada de cada una.
+         -->
+        <section class="experiences">
+            <div class="experiences__wrapper">
+                <h2 class="experiences__h2">Experiencias</h2>
+                <div class="experience__columns">
+                    <a href="ventas.html" class="experiences__a">
+                        <div class="experiences__column">
+                            <h3 class="experiences__h3">Ventas</h3>
+                            <p class="experiences__p">Mi expertise actual es en ventas B2B (PYMEs y grandes empresas) en
+                                el sector Fintech y Publicitario. Aunque mis inicios fueron en B2C en el sector Retail.
+                            </p>
+                            <p class="experiences__p">Experiencia en manejo de una amplia pipeline de clientes (+180
+                                leads al mes), uso de CRMs (Salesforce & Connect Sales) y distintas herramientas como
+                                Google Sheets, Slack, Outreach…
+                            </p>
+                            <p class="experiences__p cta">Más información</p>
+                        </div>
+                    </a>
+                    <a href="frontend.html" class="experiences__a">
+                        <div class="experiences__column">
+                            <h3 class="experiences__h3">Frontend Development</h3>
+                            <p class="experiences__p">Maquetación de páginas web desde cero con HTML, CSS y JavaScript
+                                nativo. Aplicando metodología BEM para garantizar una estructura eficiente y
+                                sostenible.</p>
+                                <p class="experiences__p cta">Más información</p>
+                        </div>
+                    </a>
+                    <a href="#" class="experiences__a">
+                        <div class="experiences__column">
+                            <h3 class="experiences__h3">Marketing Digital</h3>
+                            <p class="experiences__p">Desarrollo de estrategias de marketing digital desde el business
+                                canvas hasta la creación de un Plan de Marketing Digital fundado en los 4 pilares: SEO,
+                                SEM, SMO y SMM. </p>
+                                <p class="experiences__p cta">Más información</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
     </main>
 
     <!-- FOOTER
@@ -196,11 +238,11 @@ Estructura general:
         <div class="footer__wrapper">
             <p class="footer__p">¿Quieres ponerte en contacto o hablar sobre un <strong>proyecto?</strong></p>
             <p class="footer__p">Puedes contactarme por correo electrónico a
-                <a href="mailto:info@shantimeldoli.com" class="footer__a">info@shantimeldoli.com</a>
+                <a href="mailto:info@shantimeldoli.com" class="footer__a" title="Correo">info@shantimeldoli.com</a>
                 <!--Esta etiqueta <a> permite que el usuario pueda enviarme un correo al clicar en el hipervínculo-->
             </p>
             <p class="footer__p">o deja un mensaje en el
-                <a href="contact.html" class="footer__a">formulario de la página de contacto</a>
+                <a href="contact.html" class="footer__a" title="Formulario de Contacto">formulario de la página de contacto</a>
                 <!--Esta etiqueta <a> permite que el usuario venga redireccionado al formulario de contacto-->
             </p>
 

@@ -1,13 +1,3 @@
-/* /* ------------
-contact.css
-- Reset
-- Animación del background
-- Header
-- Formulario
-- @Medias
-- @Keyframes
-------------- * */
-
 /* ---- Reset CSS ---- */
 * {
     margin: 0;
@@ -73,7 +63,6 @@ button {
     font-family: inherit;
     background-color: transparent;
 }
-
 /* ---- Reset CSS ---- */
 
 /* ---- ANIMACIÓN DEL BACKGROUND ---- */
@@ -109,7 +98,6 @@ button {
 
     animation: expandblue 60s linear infinite both;
 }
-
 /* ---- ANIMACIÓN DEL BACKGROUND ---- */
 
 /* ---- Modificación de la barra de scroll ---- */
@@ -128,7 +116,9 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background-color: #009edc;
 }
+
 /* ---- Modificación de la barra de scroll ---- */
+
 
 /* ---- CABECERA DE LA WEB ---- */
 /* Descripción: Estilos para la cabecera de la web
@@ -144,7 +134,6 @@ body::-webkit-scrollbar-thumb:hover {
 
     border-radius: 1.625rem;
     border: 2px solid rgb(0, 0, 0);
-
 
     display: flex;
     flex-flow: row nowrap;
@@ -285,120 +274,101 @@ al pasar el ratón por encima de los distintos enlaces */
 al pasar el ratón por encima de estos */
 /* ---- CABECERA DE LA WEB ---- */
 
-/* ---- FORMULARIO ---- */
-/* Descripción: Estilos para el header que contiene el logo de la web 
-   Estructura:
-   - .section: Contiene el formulario en sí.
-   - .section__h2
-   - .form: El formulario con las redes sociales
-*/
-
-.section {
-    width: 90%;
-    max-width: 75rem;
-    min-height: 37.5rem;
-    background-color: #2a2d34d2;
-
-    padding: 5rem 3rem;
-    margin: 5rem auto;
+/* ---- MAIN ---- */
+.main{
+    width: 95%;
+    margin: 2rem auto;
+    padding: 1.5rem 3rem;
 
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 1.5rem;
-
-    box-shadow: 1.75rem 1.75rem 3.5rem #24262c,
-        -1.75rem -1.75rem 3.5rem #30343c;
+    gap: 2rem;
 }
-
-.section__h2 {
-    width: 50%;
-    text-transform: uppercase;
-    font-size: 4em;
-    line-height: 5rem;
-}
-
-.form {
-    width: 50%;
-
+.ventas__intro{
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1rem;
 }
+.ventas__h2{
+    font-size: 1.5em;
+}
+.ventas__wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.ventas__img{
+    max-width: 30rem;
+    margin: auto;
+}
+.ventas__text{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    gap: 1rem;
+}
+.ventas__p{
+    font-family: 'Libre Baskerville', serif;
+    font-size: .8em;
+    font-weight: 400;
+}
+.teleperformance{
+    flex-flow: row-reverse;
+}
+/* ---- MAIN ---- */
 
-.form__p {
-    margin: 0 0 1rem;
+/* ---- FOOTER ---- */
+/* Descripción: Estilos para el pie de página de la web
+   Estructura:
+   - footer__h4 con el titular del footer
+   - footer__p con una invitación a que el usuario me contacte y tiene en su interior unos enlaces tanto a mi correo como al formulario de contacto
+   - footer__rrss es la sección de redes sociales */
+   .footer {
+    width: 95%;
+    background-color: rgba(0, 0, 0, 0.6);
 
+    padding: 3rem 0;
+
+    margin: 1rem auto;
+
+    border-radius: 1.625rem;
+    border: 2px solid rgb(0, 0, 0);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer__h4 {
+    /* background-color: aqua; */
+    font-size: 1.2em;
+}
+
+.footer__p {
+    /* background-color: orange; */
+    text-align: center;
     font-family: 'Libre Baskerville', serif;
     font-size: .8em;
     font-weight: 400;
 }
 
-.form__a {
+.footer__a {
+    display: inline;
     text-decoration: underline;
 }
 
-.form__input {
-    width: 100%;
-    max-width: 25rem;
-    min-height: 1.875rem;
-    background-color: #2A2D34;
+.footer__rrss {
+    /* background-color: violet; */
 
-    color: white;
-    font-family: 'Libre Baskerville', serif;
-    font-size: .8em;
-    font-weight: 400;
-
-    padding: 5px;
-
-    border-radius: 5px;
-
-    outline: none;
-    border: 1px solid white;
-}
-
-.form__textarea {
-    width: 100%;
-    max-width: 25rem;
-    background-color: #2A2D34;
-
-    color: white;
-    font-family: 'Libre Baskerville', serif;
-    font-size: .8em;
-    font-weight: 400;
-
-    padding: 5px;
-
-    border-radius: 5px;
-
-    outline: none;
-    border: 1px solid white;
-}
-
-.submit {
-    width: 5rem;
-    cursor: pointer;
-    border-radius: .625rem;
-
-    color: white;
-
-    transition: color .5s ease;
-    transition: background-color .5s ease;
-}
-
-.submit:hover {
-    background-color: white;
-    color: #2A2D34;
-}
-
-.submit:active {
-    transform: scale(.9);
-}
-
-.form__ul {
     margin: 1rem 0 0;
 
     display: flex;
@@ -407,39 +377,19 @@ al pasar el ratón por encima de estos */
     align-items: center;
     gap: 1rem;
 }
-
-.form__li {
-    transition: all .5s ease;
-}
-
-.form__li:hover {
-    transform: scale(1.1);
-    color: #009DDC;
-}
-
-.form__svg {
-    width: 1.7rem;
-    height: 1.7rem;
-}
-
-/* ---- FORMULARIO ---- */
+/* ---- FOOTER ---- */
 
 /* ---- @MEDIAs ---- */
-/* Descripción: Estilos para adaptar la web a resoluciones menores */
-@media (max-width: 66.25rem) {
-    .section__h2 {
-        font-size: 3.5em;
-        line-height: 4.5rem;
+@media (max-width: 87.5rem){
+    .ventas__img{
+        max-width: 25rem;
     }
 }
-
-@media (max-width: 55.625rem) {
-    .section__h2 {
-        font-size: 3em;
-        line-height: 4rem;
+@media (max-width: 62.5rem){
+    .ventas__wrapper{
+        flex-flow: column-reverse nowrap;    
     }
 }
-
 @media (max-width: 54.375rem) {
     body::-webkit-scrollbar {
         /* Reducimos el ancho de la barra de scroll, para la versión móvil */
@@ -507,34 +457,18 @@ al pasar el ratón por encima de estos */
         width: 2rem;
         height: 2rem;
     }
+    .main{
+        padding: 1.5rem 0;
+    }
+    .ventas__img{
+        max-width: 20rem;
+    }
 }
-
 @media (max-width: 48rem) {
-    .section {
-        /*Cambia el orden de los elementos de filas a columnas*/
-        flex-flow: column nowrap;
-    }
-
-    .section__h2 {
-        width: 100%;
-    }
-
-    .form {
-        width: 100%;
+    .footer {
+        padding: 2rem 2rem 4rem;
     }
 }
-
-@media (max-width: 28.125rem) {
-    .section {
-        padding: 5rem 1rem;
-    }
-
-    .section__h2 {
-        font-size: 1.5em;
-        line-height: 2rem;
-    }
-}
-
 /* ---- @MEDIAs ---- */
 
 /* ---- KEYFRAMEs ---- */
@@ -595,6 +529,7 @@ al pasar el ratón por encima de estos */
         left: 0%;
     }
 }
+
 @keyframes expansion {
 
     /*Esta animación hacer referencia al header, para que al cargar la web se vaya expandiendo desde el centro*/
@@ -608,5 +543,4 @@ al pasar el ratón por encima de estos */
         opacity: 1;
     }
 }
-
 /* ---- KEYFRAMEs ---- */

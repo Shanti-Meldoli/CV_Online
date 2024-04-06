@@ -220,6 +220,8 @@ se le añade la clase active al botón a través de JS
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    
+    text-align: center;
 }
 
 .header__ul {
@@ -338,11 +340,6 @@ al pasar el ratón por encima de estos */
     animation: fadein 1.5s ease .5s 1 both;
 }
 
-.dev {
-    /*Este translate nos permite desplazar la palabra "developer" hacia la derecha*/
-    transform: translateX(30%);
-}
-
 /* ---- Cursor personalizado ---- */
 .pointer {
     width: 6.25rem;
@@ -376,131 +373,6 @@ al pasar el ratón por encima de estos */
 
 /* ---- HERO ---- */
 
-
-/* ---- PROYECTOS ---- */
-/* Descripción: Estilos para la sección de proyectos
-   Estructura:
-   - proyectos__h2 contiene el título de la sección
-   - proyectos__p contiene un breve párrafo descriptivo
-   - proyectos__grid es la caja con display grid que contiene todos los proyectos
-   - proyectos__wrapper hace referencia a cada proyecto individual, en su interior tenemos el enlace al proyecto que a su vez contiene el
-   título y la imágen  */
-.proyectos {
-    width: 95%;
-    background-color: rgba(0, 0, 0, 0.6);
-    margin: 0 auto 1rem;
-
-    border-radius: 1.625rem;
-
-    border: 2px solid rgb(0, 0, 0);
-
-    padding: 2rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 1rem;
-
-    animation: slideup 1.5s ease 1 both;
-
-    position: relative;
-
-    z-index: -1;
-}
-
-.proyectos__h2 {
-    width: 90%;
-    max-width: 93.75rem;
-    /* background-color: aqua; */
-    margin: 0 auto;
-
-    font-size: 1.5em;
-    font-weight: 600;
-}
-
-.proyectos__p {
-    width: 90%;
-    max-width: 93.75rem;
-    /* background-color: grey; */
-    margin: 0 auto;
-
-    font-family: 'Libre Baskerville', serif;
-    font-size: .8em;
-    font-weight: 400;
-}
-
-.proyectos__grid {
-    width: 90%;
-    max-width: 93.75rem;
-    /* background-color: bisque; */
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-    /* El uso del repeat con auto-fit nos permite hacer un diseño más responsive, ahorrando en suo de @medias*/
-    gap: 2rem;
-}
-
-.proyectos__wrapper {
-    width: 100%;
-    max-width: 28.125rem;
-
-    margin: auto;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-.proyectos__a::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-
-    backdrop-filter: blur(2px);
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    transform: translateX(-100%);
-
-    transition: all .5s ease;
-}
-
-.proyectos__wrapper:hover .proyectos__a::before {
-    transform: translateX(0);
-}
-
-.proyectos__img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-}
-
-.proyectos__h3 {
-    font-size: 1.5rem;
-
-    opacity: 0;
-
-    position: absolute;
-    left: 1.5625rem;
-    bottom: 1.25rem;
-
-    transition: all .5s ease;
-}
-
-.proyectos__wrapper:hover .proyectos__h3 {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-/* ---- PROYECTOS ---- */
-
-
 /* ---- SOBRE MI ---- */
 /* Descripción: Estilos para la sección "sobre mi"
    Estructura:
@@ -510,17 +382,15 @@ al pasar el ratón por encima de estos */
     - about__img contiene una fotografia*/
 .about {
     width: 95%;
-    /* background-color: bisque; */
     margin: auto;
 }
 
 .about__wrapper {
-    width: 90%;
-    max-width: 93.75rem;
-    /* background-color: grey; */
-    margin: auto;
-
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 2rem;
+
+    border-radius: 1.625rem;
+    border: 2px solid rgb(0, 0, 0);
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28.125rem, 1fr));
@@ -551,15 +421,77 @@ al pasar el ratón por encima de estos */
     font-size: .8em;
     font-weight: 400;
 }
-
+.about__a{
+    text-decoration: underline;
+}
 .about__img {
-    max-width: 50rem;
-    /* background-color: azure; */
+    max-width: 40rem;
     margin: auto;
 }
 
 /* ---- SOBRE MI ---- */
 
+/* ---- Experiencias ---- */
+/* Descripción: Estilos para la sección "Experiencias"*/
+.experiences{
+    width: 95%;
+    margin: auto;
+}
+.experiences__wrapper{
+    padding: 3rem 2rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+}
+.experiences__h2{
+    font-size: 1.5em;
+}
+.experience__columns{
+    max-width: 100%;
+    /* background-color: red; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* El uso del repeat con auto-fit nos permite hacer un diseño más responsive, ahorrando en suo de @medias*/
+    gap: 5rem;
+}
+.experiences__a{
+    /* background-color: violet; */
+    text-align: center;
+
+    transition: all .5s ease;
+}
+.experiences__column{}
+.experiences__h3{
+    font-size: 1.2em;
+}
+.experiences__p{
+    font-family: 'Libre Baskerville', serif;
+    font-size: .8em;
+    font-weight: 400;
+
+    margin: .5rem 0 0;
+}
+.cta{
+    margin: 1rem 0 0;
+
+    opacity: 0;
+
+    text-decoration: underline;
+
+    transition: all .5s ease;
+}
+.experiences__a:hover{
+    transform: scale(1.1);
+}
+.experiences__a:hover .cta{
+    opacity: 1;
+}
+/* ---- Experiencias ---- */
 
 /* ---- FOOTER ---- */
 /* Descripción: Estilos para el pie de página de la web
@@ -614,7 +546,6 @@ al pasar el ratón por encima de estos */
     align-items: center;
     gap: 1rem;
 }
-
 /* ---- FOOTER ---- */
 
 /* ---- @MEDIAs ---- */
@@ -642,6 +573,9 @@ al pasar el ratón por encima de estos */
     .hero__h2 {
         /*Ajusta el interlineado del titular debido a su tamaño reducido*/
         line-height: .8em;
+    }
+    .experience__columns{
+        gap: 3rem;
     }
 }
 
@@ -724,13 +658,8 @@ al pasar el ratón por encima de estos */
         position: relative;
         z-index: -1; /* Para que el menú móvil aparezca por encima del hero */
     }
-
-    .proyectos__wrapper {
-        border-radius: .3125rem;
-    }
-
-    .proyectos__cta {
-        display: inline;
+    .experience__columns{
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
 }
 
@@ -789,14 +718,16 @@ al pasar el ratón por encima de estos */
         min-height: 40vh;
     }
 
-    .dev {
+    .online {
         transform: translateX(0);
     }
 
-    .proyectos__grid,
     .about__wrapper {
         grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
 
+    }
+    .experience__columns{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
@@ -888,8 +819,7 @@ al pasar el ratón por encima de estos */
 }
 
 @keyframes fadein {
-
-    /*Esta animación hacer referencia al texto "Frontend Developer" del hero, para que al cargar la web aparezcan poco a poco*/
+    /*Esta animación hacer referencia al texto "Currículum Online" del hero, para que al cargar la web aparezcan poco a poco*/
     from {
         opacity: 0;
     }
@@ -898,17 +828,4 @@ al pasar el ratón por encima de estos */
         opacity: 1;
     }
 }
-
-@keyframes slideup {
-
-    /*Esta animación hacer referencia a la sección proyectos, para que al cargar la web dicha sección aparezca desde abajo*/
-    from {
-        transform: translateY(100%);
-    }
-
-    to {
-        transform: translateY(0%);
-    }
-}
-
 /* ---- KEYFRAMEs ---- */

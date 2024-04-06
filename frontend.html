@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia en desarrollo Frontend</title>
+
+    <link rel="stylesheet" href="css/frontend.css">
+    <script src="js/frontend.js" defer></script>
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="assets/sm_logo.svg">
+
+</head>
+
+<body>
+
+    <!-- ANIMACIÓN DEL BACKGROUND -->
+    <!-- Este <div> contiene la animación que se reproduce en bucle en el fondo de la web -->
+    <div class="circulos">
+        <div class="circulo"></div>
+        <div class="circulo blue"></div>
+        <!--Este div tiene la clase "blue" para poder aplicarle un cambio de color y un punto inicial distinto en la animación respecto al
+                primer circulo
+            -->
+    </div>
+
+    <!-- CABECERA DE LA WEB -->
+    <header class="header">
+        <h1 class="header__h1">
+            <!--El h1 contiene dentro el logo de la web con un <a> que lleva a la página de inicio-->
+            <a href="#inicio" class="header__a" title="logo">
+                <img src="assets/sm_logo.svg" alt="Logo" height="30" width="30">
+            </a>
+        </h1>
+        <div class="header__menu">
+            <!--Este div engloba tanto la barra de navegación de la web, como las redes sociales, para que en la versión responsive, ambas desaparezcan, quedando solo el logo de la web-->
+            <nav class="header__nav">
+                <ul class="header__ul">
+                    <li class="header__li">
+                        <a class="header__a" href="index.html#inicio" title="Inicio">Inicio</a>
+                    </li>
+                    <li class="header__li">
+                        <a class="header__a" href="index.html#about" title="Sobre mi">Sobre mi</a>
+                    </li>
+                    <li class="header__li">
+                        <a class="header__a" href="ventas.html" title="Experiencia en Ventas">Ventas</a>
+                    </li>
+                    <li class="header__li">
+                        <a class="header__a" href="frontend.html" title="Experiencia en maquetación web">Frontend
+                            Development</a>
+                    </li>
+                    <li class="header__li">
+                        <a class="header__a" href="contact.html" title="Formulario de Contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="header__rrss rrss">
+                <li class="rrss__li">
+                    <!-- En ambos enlaces, al llevar a webs externas, tinen los atributos target="_blank" rel="noreferrer"
+                            para no interrumpir la navegación en mi web y para respetar la privacidad del usuario 
+                        -->
+                    <a class="rrss__a" href="https://www.linkedin.com/in/s-meldoli98/" target="_blank" rel="noreferrer"
+                        title="LinkedIn">
+                        <svg class="rrss__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="rrss__li">
+                    <a class="rrss__a" href="https://github.com/Shanti-Meldoli" target="_blank" rel="noreferrer"
+                        title="GitHub">
+                        <svg class="rrss__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <button class="burger__btn">
+        <!--En la versión movil en el header queda solo el h1 y este botón es el que nos permite desplegar el menú-->
+        <span class="burger__bar"></span> <!--Esta barra nos permitirá crear un burguer icon que cambie al CLICARLO-->
+    </button>
+
+    <!-- SECCIÓN PRINCIPAL DE LA WEB -->
+    <main class="main">
+        <div class="front__intro">
+            <h2 class="front__h2">Proyectos web que he maquetado</h2>
+            <p class="front__p">Durante mi formación como Frontend Developer he maquetado distintas webs aplicando lo
+                aprendido y llevando a cabo un desarrollo desde cero y sin galerias, usando unicamente HTML, CSS y
+                JavaScript nativo junto a una metodología BEM para garantizar una estructura eficiente y sostenible.</p>
+            <p class="front__p">Estos son algunos de los proyectos en los que he trabajado:</p>
+        </div>
+        <div class="front__wrapper webnm">
+            <div class="front__info">
+                <h3 class="front__h3">Nomad Movement</h3>
+                <p class="front__p">Este sitio web es el reflejo de mi proyecto personal y la razón por la que decidí
+                    adentrarme en el mundo del Marketing. Representa una plataforma donde los usuarios pueden conocer
+                    mejor qué es Nomad Movement, así como aprovechar mis servicios de Coaching Online, incluyendo
+                    programas de entrenamiento personalizados y adaptados a sus necesidades específicas.
+                </p>
+                <p class="front__p">Además, la web cuenta con una sección dedicada a Programas, la cual se encuentra en
+                    proceso de desarrollo. Esta área está destinada a ofrecer infoproductos, como programas de
+                    entrenamiento de 4 semanas predefinidos y talleres especializados en habilidades concretas, por
+                    ejemplo, el handstand, entre otros.
+                </p>
+                <p class="front__p">Próximamente, tengo previsto enriquecer el sitio con un Blog, proyecto que tomará
+                    forma una vez complete el tercer y último módulo de mi Máster enfocado en WordPress. Este espacio
+                    estará dedicado a compartir conocimientos, experiencias y consejos valiosos, consolidando así mi
+                    compromiso con la entrega de contenido de calidad y el fomento de una comunidad alrededor de Nomad
+                    Movement.
+                </p>
+                <div class="front__ctas">
+                    <a href="https://nomad-movement.com/" class="front__a" title="Web de Nomad Movement" target="_blank"
+                        rel="noreferrer">
+                        <span class="front__span">Visita la web</span>
+                    </a>
+                    <a href="https://github.com/Shanti-Meldoli/Nomad-Movement" class="front__a"
+                        title="Proyecto en GitHub de Nomad Movement" target="_blank" rel="noreferrer">
+                        <span class="front__span">Ver en GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <img src="#" alt="Imágen de la web de Nomad Movement" class="front__img">
+        </div>
+        <div class="front__wrapper ark">
+            <div class="front__info">
+                <h3 class="front__h3">Ark Shelter - Copycat</h3>
+                <p class="front__p">Esta página es un copycat de la web de Ark Shelter cuyo objetivo era practicar el
+                    uso de videos, el display: grid; y el position.
+                </p>
+                <div class="front__ctas">
+                    <a href="https://www.ark-shelter.com/en" class="front__a" title="Web de Ark Shelter" target="_blank"
+                        rel="noreferrer">
+                        <span class="front__span">Visita la web</span>
+                    </a>
+                    <a href="https://github.com/Shanti-Meldoli/Copycat_Ark-Shelter" class="front__a"
+                        title="Proyecto en GitHub de Ark Shelter" target="_blank" rel="noreferrer">
+                        <span class="front__span">Ver en GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <img src="assets/ark_shelter_cover.jpg" alt="Imágen de la web de Ark Shelter" class="front__img">
+        </div>
+        <div class="front__wrapper stck">
+            <div class="front__info">
+                <h3 class="front__h3">Stockholm 70 - Copycat</h3>
+                <p class="front__p">Esta página es un copycat de la web de Stockholm 70 cuyo objetivo era practicar el
+                    uso de display:grid; y la inserción de video y mapas con iframe, creación de formularios, uso de
+                    Lightbox y efecto carrousel con JavaScript.
+                </p>
+                <div class="front__ctas">
+                    <a href="https://stockholm70.qodeinteractive.com/" class="front__a" title="Web de Stockholm 70" target="_blank"
+                        rel="noreferrer">
+                        <span class="front__span">Visita la web</span>
+                    </a>
+                    <a href="https://github.com/Shanti-Meldoli/Copycat_Stockholm_70" class="front__a"
+                        title="Proyecto en GitHub de Stockholm 70" target="_blank" rel="noreferrer">
+                        <span class="front__span">Ver en GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <img src="assets/stockholm_cover.jpg" alt="Imágen de la web de Stockholm 70" class="front__img">
+        </div>
+    </main>
+    <!-- SECCIÓN PRINCIPAL DE LA WEB -->
+
+    <!-- FOOTER
+    Descripción: Este es el pie de página, en su interior hay una invitación a que el usuario me contacte, ya sea a través de mi correo o por el
+    formulario de contacto, además también se vuelven a indicar las redes sociales
+    -->
+    <footer class="footer">
+        <h4 class="footer__h4">Hablemos</h4>
+        <div class="footer__wrapper">
+            <p class="footer__p">¿Quieres ponerte en contacto o hablar sobre un <strong>proyecto?</strong></p>
+            <p class="footer__p">Puedes contactarme por correo electrónico a
+                <a href="mailto:info@shantimeldoli.com" class="footer__a" title="Correo">info@shantimeldoli.com</a>
+                <!--Esta etiqueta <a> permite que el usuario pueda enviarme un correo al clicar en el hipervínculo-->
+            </p>
+            <p class="footer__p">o deja un mensaje en el
+                <a href="contact.html" class="footer__a" title="Formulario de Contacto">formulario de la página de
+                    contacto</a>
+                <!--Esta etiqueta <a> permite que el usuario venga redireccionado al formulario de contacto-->
+            </p>
+
+        </div>
+
+        <ul class="footer__rrss rrss">
+            <li class="rrss__li">
+                <a class="rrss__a" href="https://www.linkedin.com/in/s-meldoli98/" target="_blank" rel="noreferrer"
+                    title="LinkedIn">
+                    <svg class="rrss__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4" />
+                    </svg>
+                </a>
+            </li>
+            <li class="rrss__li">
+                <a class="rrss__a" href="https://github.com/Shanti-Meldoli" target="_blank" rel="noreferrer"
+                    title="GitHub">
+                    <svg class="rrss__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+
+</body>
+
+</html>
