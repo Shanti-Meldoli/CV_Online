@@ -1,4 +1,4 @@
-/* /* ------------
+/* ------------
 index.css
 - Reset
 - Animación del background
@@ -7,7 +7,7 @@ index.css
 - Footer
 - @Medias
 - @Keyframes
-------------- * */
+-------------*/
 
 /* ---- Reset CSS ---- */
 * {
@@ -213,13 +213,11 @@ se le añade la clase active al botón a través de JS
 }
 
 .header__menu {
-    width: calc((100% / 3) * 2);
-    /* background-color: bisque; */
-
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    gap: 3rem;
     
     text-align: center;
 }
@@ -432,7 +430,13 @@ al pasar el ratón por encima de estos */
 /* ---- SOBRE MI ---- */
 
 /* ---- Experiencias ---- */
-/* Descripción: Estilos para la sección "Experiencias"*/
+/* Descripción: Estilos para la sección "Experiencias"
+   Estructura:
+   - experiences__wrapper que engloba toda la sección
+   - experiences__h2 es el titular de la sección
+   - experience__columns es el contenedor de las tres experiencias
+   - experiences__a es el contenedor de cada experiencia siendo un enlace a su página dedicadda y contiene el titular (experiences__h3) y la descripción (experiences__p)
+*/
 .experiences{
     width: 95%;
     margin: auto;
@@ -455,7 +459,7 @@ al pasar el ratón por encima de estos */
     /* background-color: red; */
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     /* El uso del repeat con auto-fit nos permite hacer un diseño más responsive, ahorrando en suo de @medias*/
     gap: 5rem;
 }
@@ -564,6 +568,12 @@ al pasar el ratón por encima de estos */
 }
 
 @media (max-width: 68.75rem) {
+    .header__menu {
+        gap: 1.5rem;
+    }
+    .header__ul{
+        gap: 1rem;
+    }
     .hero__wrapper {
         /*Ajusta el position del hero__wrapper respecto a la pantalla*/
         top: 33%;
@@ -596,7 +606,7 @@ al pasar el ratón por encima de estos */
         width: 100%;
         min-height: 100vh;
         background-color: rgba(0, 0, 0, 0.8);
-        padding: 25vh 0;
+        padding: 20vh 0;
 
         backdrop-filter: blur(.625rem);
 
@@ -607,6 +617,7 @@ al pasar el ratón por encima de estos */
         gap: 3rem;
 
         font-size: 1.5em;
+        line-height: 1em;
 
         position: fixed;
         top: 0;
@@ -659,7 +670,7 @@ al pasar el ratón por encima de estos */
         z-index: -1; /* Para que el menú móvil aparezca por encima del hero */
     }
     .experience__columns{
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
     }
 }
 
@@ -727,7 +738,10 @@ al pasar el ratón por encima de estos */
 
     }
     .experience__columns{
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    }
+    .experiences__wrapper{
+        padding: 2rem .5rem;
     }
 }
 

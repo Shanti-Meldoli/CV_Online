@@ -8,6 +8,7 @@
 *   - Funciones
 *   - Código:
         > Animación del menú hamburguesa
+        > Animación del carrousel
 *-------------*/
 
 /* IIFE */
@@ -61,6 +62,31 @@
         })
     })
     // ANIMACIÓN DEL MENÚ HAMBURGUESA
+
+    // ANIMACIÓN DEL CARROUSEL
+        //Cuando hago CLICK en carrousel__btn, carrousel__grande hace TRANSLATEx () ----> INDEX * (100 / numero de botones)
+           //Cuando hago CLICK en carrousel__btn, REMOVE la clase active a todos los botones y ADD la clase active al botón CLICADO
+
+        const carrouselBtn = document.querySelectorAll(".carrousel__btn")
+        const carrouselGrande = document.querySelector(".carrousel__grande")
+        const numBtns = carrouselBtn.length //Representa el nº de botones que hay en el carrousel para adaptarlo automáticamente en el caso de añadir más en el futuro
+
+        carrouselBtn.forEach((eachBtn, index) => {
+            carrouselBtn[index].addEventListener("click", () => {
+                carrouselGrande.style.transform = `translateX(-${index * (100 / numBtns)}%)`
+            })
+        })    
+
+        carrouselBtn.forEach((eachBtn, index) => {
+            carrouselBtn[index].addEventListener("click", () => {
+                carrouselBtn.forEach((eachBtn, index) => {
+                    carrouselBtn[index].classList.remove("active")
+                })
+                carrouselBtn[index].classList.add("active")
+            })
+        })
+    // ANIMACIÓN DEL CARROUSEL
+
 })();
 
 /* IIFE */

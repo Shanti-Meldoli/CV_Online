@@ -1,3 +1,13 @@
+/* ------------
+marketing.css
+- Reset
+- Animación del background
+- Header
+- Main (marketing)
+- Footer
+- @Medias
+- @Keyframes
+-------------*/
 /* ---- Reset CSS ---- */
 * {
     margin: 0;
@@ -200,14 +210,12 @@ se le añade la clase active al botón a través de JS
 }
 
 .header__menu {
-    width: calc((100% / 3) * 2);
-    /* background-color: bisque; */
-
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-
+    gap: 3rem;
+    
     text-align: center;
 }
 
@@ -274,6 +282,46 @@ al pasar el ratón por encima de los distintos enlaces */
 al pasar el ratón por encima de estos */
 /* ---- CABECERA DE LA WEB ---- */
 
+/* ---- MAIN ---- */
+/* ---- Marketing ---- */
+/* Descripción: Estilos para la sección "mkt"
+   Estructura:
+   - mkt contiene una breve descripción de los conocimientos adquiridos durante la formación
+*/
+.mkt{
+    width: 95%;
+    margin: 2rem auto;
+    padding: 1.5rem 3rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.mkt__h2{
+    font-size: 1.5em;
+}
+.mkt__p{
+    font-family: 'Libre Baskerville', serif;
+    font-size: .8em;
+    font-weight: 400;
+}
+.mkt__ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .5rem;
+}
+.mkt__li{
+    font-family: 'Libre Baskerville', serif;
+    font-size: .8em;
+    font-weight: 400;
+}
+/* ---- Marketing ---- */
+/* ---- MAIN ---- */
+
 /* ---- FOOTER ---- */
 /* Descripción: Estilos para el pie de página de la web
    Estructura:
@@ -330,6 +378,14 @@ al pasar el ratón por encima de estos */
 /* ---- FOOTER ---- */
 
 /* ---- @MEDIAs ---- */
+@media (max-width: 68.75rem){
+    .header__menu {
+        gap: 1.5rem;
+    }
+    .header__ul{
+        gap: 1rem;
+    }
+}
 @media (max-width: 54.375rem) {
     body::-webkit-scrollbar {
         /* Reducimos el ancho de la barra de scroll, para la versión móvil */
@@ -358,6 +414,7 @@ al pasar el ratón por encima de estos */
         gap: 3rem;
 
         font-size: 1.5em;
+        line-height: 1em;
 
         position: fixed;
         top: 0;
@@ -396,6 +453,9 @@ al pasar el ratón por encima de estos */
     .header .rrss__svg {
         width: 2rem;
         height: 2rem;
+    }
+    .mkt__info {
+        padding: 1.5rem 0;
     }
 }
 @media (max-width: 48rem) {

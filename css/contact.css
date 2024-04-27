@@ -1,4 +1,4 @@
-/* /* ------------
+/*------------
 contact.css
 - Reset
 - Animación del background
@@ -6,7 +6,7 @@ contact.css
 - Formulario
 - @Medias
 - @Keyframes
-------------- * */
+-------------*/
 
 /* ---- Reset CSS ---- */
 * {
@@ -211,14 +211,12 @@ se le añade la clase active al botón a través de JS
 }
 
 .header__menu {
-    width: calc((100% / 3) * 2);
-    /* background-color: bisque; */
-
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-
+    gap: 3rem;
+    
     text-align: center;
 }
 
@@ -352,9 +350,9 @@ al pasar el ratón por encima de estos */
     font-size: .8em;
     font-weight: 400;
 
-    padding: 5px;
+    padding: .3125rem;
 
-    border-radius: 5px;
+    border-radius: .3125rem;
 
     outline: none;
     border: 1px solid white;
@@ -370,9 +368,9 @@ al pasar el ratón por encima de estos */
     font-size: .8em;
     font-weight: 400;
 
-    padding: 5px;
+    padding: .3125rem;
 
-    border-radius: 5px;
+    border-radius: .3125rem;
 
     outline: none;
     border: 1px solid white;
@@ -426,6 +424,14 @@ al pasar el ratón por encima de estos */
 
 /* ---- @MEDIAs ---- */
 /* Descripción: Estilos para adaptar la web a resoluciones menores */
+@media (max-width: 68.75rem){
+    .header__menu {
+        gap: 1.5rem;
+    }
+    .header__ul{
+        gap: 1rem;
+    }
+}
 @media (max-width: 66.25rem) {
     .section__h2 {
         font-size: 3.5em;
@@ -468,6 +474,7 @@ al pasar el ratón por encima de estos */
         gap: 3rem;
 
         font-size: 1.5em;
+        line-height: 1em;
 
         position: fixed;
         top: 0;

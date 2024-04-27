@@ -1,3 +1,13 @@
+/* ------------
+ventas.css
+- Reset
+- Animación del background
+- Header
+- Main (ventas)
+- Footer
+- @Medias
+- @Keyframes
+-------------*/
 /* ---- Reset CSS ---- */
 * {
     margin: 0;
@@ -200,14 +210,12 @@ se le añade la clase active al botón a través de JS
 }
 
 .header__menu {
-    width: calc((100% / 3) * 2);
-    /* background-color: bisque; */
-
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-
+    gap: 3rem;
+    
     text-align: center;
 }
 
@@ -275,7 +283,14 @@ al pasar el ratón por encima de estos */
 /* ---- CABECERA DE LA WEB ---- */
 
 /* ---- MAIN ---- */
-.main{
+/* ---- Ventas ---- */
+/* Descripción: Estilos para la sección "Ventas"
+   Estructura:
+   - ventas__intro con el titular de la sección y una breve introducción
+   - ventas__wrapper con la imagen y el texto descriptivo del puesto de trabajo de cada experiencia
+*/
+
+.ventas{
     width: 95%;
     margin: 2rem auto;
     padding: 1.5rem 3rem;
@@ -314,6 +329,9 @@ al pasar el ratón por encima de estos */
     align-items: flex-start; 
     gap: 1rem;
 }
+.ventas__h3{
+    font-size: 1.2em;
+}
 .ventas__p{
     font-family: 'Libre Baskerville', serif;
     font-size: .8em;
@@ -322,6 +340,7 @@ al pasar el ratón por encima de estos */
 .teleperformance{
     flex-flow: row-reverse;
 }
+/* ---- Ventas ---- */
 /* ---- MAIN ---- */
 
 /* ---- FOOTER ---- */
@@ -385,6 +404,14 @@ al pasar el ratón por encima de estos */
         max-width: 25rem;
     }
 }
+@media (max-width: 68.75rem){
+    .header__menu {
+        gap: 1.5rem;
+    }
+    .header__ul{
+        gap: 1rem;
+    }
+}
 @media (max-width: 62.5rem){
     .ventas__wrapper{
         flex-flow: column-reverse nowrap;    
@@ -418,6 +445,7 @@ al pasar el ratón por encima de estos */
         gap: 3rem;
 
         font-size: 1.5em;
+        line-height: 1em;
 
         position: fixed;
         top: 0;
@@ -465,6 +493,15 @@ al pasar el ratón por encima de estos */
     }
 }
 @media (max-width: 48rem) {
+    .main{
+        text-align: center;
+    }
+    .ventas__intro{
+        align-items: center;
+    }
+    .ventas__text{
+        align-items: center;
+    }
     .footer {
         padding: 2rem 2rem 4rem;
     }

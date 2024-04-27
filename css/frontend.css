@@ -1,3 +1,13 @@
+/* ------------
+frontend.css
+- Reset
+- Animación del background
+- Header
+- Main (frontend)
+- Footer
+- @Medias
+- @Keyframes
+-------------*/
 /* ---- Reset CSS ---- */
 * {
     margin: 0;
@@ -208,14 +218,12 @@ se le añade la clase active al botón a través de JS
 }
 
 .header__menu {
-    width: calc((100% / 3) * 2);
-    /* background-color: bisque; */
-
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-
+    gap: 3rem;
+    
     text-align: center;
 }
 
@@ -283,7 +291,15 @@ al pasar el ratón por encima de estos */
 /* ---- CABECERA DE LA WEB ---- */
 
 /* ---- MAIN ---- */
-.main {
+/* ---- Frontend ---- */
+/* Descripción: Estilos para la sección "front"
+   Estructura:
+   - front__intro con el titular de la sección y una breve introducción
+   - front__wrapper con la imagen y el texto descriptivo del puesto de trabajo de cada experiencia
+   - front__wrapper webnm es la unica sección que contiene en lugar de una imágen un carrusel de imágenes para mostrar las distintas secciones de la web
+   - front__carrousel es el carrusel de imágenes
+*/
+.front {
     width: 95%;
     margin: 2rem auto;
     padding: 1.5rem 3rem;
@@ -310,14 +326,11 @@ al pasar el ratón por encima de estos */
 .front__wrapper {
     width: 100%;
     
-    background-color: orange;
-
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
-
 }
 
 .front__info {
@@ -350,7 +363,7 @@ al pasar el ratón por encima de estos */
 
     padding: 1rem 2rem;
 
-    border-radius: 25px;
+    border-radius: 1.5625rem;
     border: 2px solid rgb(0, 0, 0);
 
     position: relative;
@@ -373,22 +386,18 @@ al pasar el ratón por encima de estos */
     content: '';
     display: block;
 
-    width: 10px;
-    height: 10px;
+    width: .625rem;
+    height: .625rem;
     background-color: white;
 
     border-radius: 50%;
 
     position: absolute;
 
-    top: calc(50% - (10px / 2));
-    left: 10px;
+    top: calc(50% - (.625rem / 2));
+    left: .625rem;
 
     transition: all .5s ease;
-}
-
-.front__a:hover {
-    border: 2px solid #ff8c00;
 }
 
 .front__a:hover::before {
@@ -399,14 +408,58 @@ al pasar el ratón por encima de estos */
     color: black;
 }
 
-.front__img {
+.front__img, .carrousel {
     max-width: 40%;
     margin: auto;
+}
+.carrousel{
+    overflow: hidden;
+}
+.carrousel__grande{
+    width: 300%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    transition: all .5s ease;
+}
+.carrousel__img{
+    width: calc(100% / 3);
+}
+.carrousel__ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.carrousel__li{}
+.carrousel__btn{
+    width: 1rem;
+    height: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    margin: .5rem auto;
+
+    border-radius: 50%;
+    border: 1px solid white;
+
+    cursor: pointer;
+
+    transition: all .5s ease;
+}
+.carrousel__btn:hover{
+    transform: scale(1.2);
+}
+.carrousel__btn.active{
+    background-color: white;
 }
 .ark{
     flex-flow: row-reverse nowrap;
 }
-
+/* ---- Frontend ---- */
 /* ---- MAIN ---- */
 
 /* ---- FOOTER ---- */
@@ -466,6 +519,27 @@ al pasar el ratón por encima de estos */
 /* ---- FOOTER ---- */
 
 /* ---- @MEDIAs ---- */
+@media (max-width: 100rem){
+    .front__img, .carrousel{
+        max-width: 50%;
+    }
+}
+@media (max-width: 81.25rem){
+    .front__wrapper{
+        flex-flow: column nowrap;
+    }
+    .front__img, .carrousel{
+        max-width: 80%;
+    }
+}
+@media (max-width: 68.75rem){
+    .header__menu {
+        gap: 1.5rem;
+    }
+    .header__ul{
+        gap: 1rem;
+    }
+}
 @media (max-width: 54.375rem) {
     body::-webkit-scrollbar {
         /* Reducimos el ancho de la barra de scroll, para la versión móvil */
@@ -494,6 +568,7 @@ al pasar el ratón por encima de estos */
         gap: 3rem;
 
         font-size: 1.5em;
+        line-height: 1em;
 
         position: fixed;
         top: 0;
@@ -533,9 +608,24 @@ al pasar el ratón por encima de estos */
         width: 2rem;
         height: 2rem;
     }
+    .front__a{
+        padding: .5rem 1rem;
+    }
+    .front__a::before{
+        display: none;
+    }
+    .front__a:hover .front__span {
+        color: white;
+    }
 }
 
 @media (max-width: 48rem) {
+    .main{
+        padding: 1.5rem .5rem;
+    }
+    .front__img, .carrousel{
+        max-width: 100%;
+    }
     .footer {
         padding: 2rem 2rem 4rem;
     }

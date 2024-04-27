@@ -45,7 +45,7 @@ Estructura general:
     <header class="header">
         <h1 class="header__h1">
             <!--El h1 contiene dentro el logo de la web con un <a> que lleva a la página de inicio-->
-            <a href="index.html#inicio" class="header__a" title="logo">
+            <a href="index.html" class="header__a" title="logo">
                 <img src="assets/sm_logo.svg" alt="Logo" height="30" width="30">
             </a>
         </h1>
@@ -54,10 +54,19 @@ Estructura general:
             <nav class="header__nav">
                 <ul class="header__ul">
                     <li class="header__li">
-                        <a class="header__a" href="index.html#inicio" title="Inicio">Inicio</a>
+                        <a class="header__a" href="index.html" title="Inicio">Inicio</a>
                     </li>
                     <li class="header__li">
                         <a class="header__a" href="index.html#about" title="Sobre mi">Sobre mi</a>
+                    </li>
+                    <li class="header__li">
+                        <a class="header__a" href="ventas.html" title="Experiencia en Ventas">Ventas</a>
+                    </li>
+                    <li class="header__li">
+                        <a class="header__a" href="frontend.html" title="Experiencia en maquetación web">Frontend<br>Development</a>
+                    </li>
+                    <li class="header__li">
+                        <a class="header__a" href="marketing.html" title="Experiencia en marketing digital">Marketing<br>Digital</a>
                     </li>
                     <li class="header__li">
                         <a class="header__a" href="contact.html" title="Contacto">Contacto</a>
@@ -104,17 +113,20 @@ Estructura general:
     <section class="section">
         <h2 class="section__h2">¡Demos vida a tu proyecto!</h2>
         <form action="#" method="post" class="form">
-            <h1 class="form__h1">Contáctame</h1>
+            <h2 class="form__h1">Contáctame</h2>
             <p class="form__p">Si quieres ponerte en contacto o hablar sobre un proyecto rellena este formulario o
-                envíame un correo a <a href="mailto:info@shantimeldoli.com" class="form__a">info@shantimeldoli.com</a>
+                envíame un correo a <a href="mailto:info@shantimeldoli.com" class="form__a" title="Correo">info@shantimeldoli.com</a>
                 <!--Esta etiqueta <a> permite que el usuario pueda enviarme un correo al clicar en el hipervínculo-->
             </p>
-            <input class="form__input name" type="text" name="Nombre" placeholder="Nombre completo" required autofocus>
+            <label for="nombre"></label>
+            <input class="form__input name" type="text" name="Nombre" placeholder="Nombre completo" id="nombre" required autofocus>
             <!--El atributo required hace que este input se obligatorio para enviar el formulario, además el autofocus hace que sea el input seleccionado por defecto al cargar la página-->
-            <input class="form__input email" type="email" name="Email" placeholder="Correo electrónico" required>
+            <label for="email"></label>
+            <input class="form__input email" type="email" name="Email" placeholder="Correo electrónico" id="email" required>
             <!--El atributo required hace que este input se obligatorio para enviar el formulario-->
+            <label for="info"></label>
             <textarea class="form__textarea" name="informacion adicional" cols="30" rows="10"
-                placeholder="Escríbeme..."></textarea>
+                placeholder="Escríbeme..." id="info"></textarea>
             <input class="form__input submit" type="submit" value="Enviar">
 
             <ul class="form__ul">

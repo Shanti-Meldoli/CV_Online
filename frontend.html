@@ -1,5 +1,13 @@
+<!-- 
+Descripción: Este archivo HTML contine la página dedicada a mi experiencia en programación frontend del sitio web.
+Estructura general:
+- Animación del background
+- Encabezado con el logo de la web, una barra de navegación a las distintas secciones de la web y las redes sociales
+- Contenido principal de la web compuesto por una breve introducción y distintas secciones, cada una dedicada a uno de los proyectos.
+- El pie de página con un Call to Action para que el usuario se ponga en contacto conmigo
+ -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -37,7 +45,7 @@
     <header class="header">
         <h1 class="header__h1">
             <!--El h1 contiene dentro el logo de la web con un <a> que lleva a la página de inicio-->
-            <a href="#inicio" class="header__a" title="logo">
+            <a href="index.html" class="header__a" title="logo">
                 <img src="assets/sm_logo.svg" alt="Logo" height="30" width="30">
             </a>
         </h1>
@@ -46,7 +54,7 @@
             <nav class="header__nav">
                 <ul class="header__ul">
                     <li class="header__li">
-                        <a class="header__a" href="index.html#inicio" title="Inicio">Inicio</a>
+                        <a class="header__a" href="index.html" title="Inicio">Inicio</a>
                     </li>
                     <li class="header__li">
                         <a class="header__a" href="index.html#about" title="Sobre mi">Sobre mi</a>
@@ -55,8 +63,10 @@
                         <a class="header__a" href="ventas.html" title="Experiencia en Ventas">Ventas</a>
                     </li>
                     <li class="header__li">
-                        <a class="header__a" href="frontend.html" title="Experiencia en maquetación web">Frontend
-                            Development</a>
+                        <a class="header__a" href="frontend.html" title="Experiencia en maquetación web">Frontend<br>Development</a>
+                    </li>
+                    <li class="header__li">
+                        <a class="header__a" href="marketing.html" title="Experiencia en marketing digital">Marketing<br>Digital</a>
                     </li>
                     <li class="header__li">
                         <a class="header__a" href="contact.html" title="Formulario de Contacto">Contacto</a>
@@ -98,84 +108,103 @@
 
     <!-- SECCIÓN PRINCIPAL DE LA WEB -->
     <main class="main">
-        <div class="front__intro">
-            <h2 class="front__h2">Proyectos web que he maquetado</h2>
-            <p class="front__p">Durante mi formación como Frontend Developer he maquetado distintas webs aplicando lo
-                aprendido y llevando a cabo un desarrollo desde cero y sin galerias, usando unicamente HTML, CSS y
-                JavaScript nativo junto a una metodología BEM para garantizar una estructura eficiente y sostenible.</p>
-            <p class="front__p">Estos son algunos de los proyectos en los que he trabajado:</p>
-        </div>
-        <div class="front__wrapper webnm">
-            <div class="front__info">
-                <h3 class="front__h3">Nomad Movement</h3>
-                <p class="front__p">Este sitio web es el reflejo de mi proyecto personal y la razón por la que decidí
-                    adentrarme en el mundo del Marketing. Representa una plataforma donde los usuarios pueden conocer
-                    mejor qué es Nomad Movement, así como aprovechar mis servicios de Coaching Online, incluyendo
-                    programas de entrenamiento personalizados y adaptados a sus necesidades específicas.
-                </p>
-                <p class="front__p">Además, la web cuenta con una sección dedicada a Programas, la cual se encuentra en
-                    proceso de desarrollo. Esta área está destinada a ofrecer infoproductos, como programas de
-                    entrenamiento de 4 semanas predefinidos y talleres especializados en habilidades concretas, por
-                    ejemplo, el handstand, entre otros.
-                </p>
-                <p class="front__p">Próximamente, tengo previsto enriquecer el sitio con un Blog, proyecto que tomará
-                    forma una vez complete el tercer y último módulo de mi Máster enfocado en WordPress. Este espacio
-                    estará dedicado a compartir conocimientos, experiencias y consejos valiosos, consolidando así mi
-                    compromiso con la entrega de contenido de calidad y el fomento de una comunidad alrededor de Nomad
-                    Movement.
-                </p>
-                <div class="front__ctas">
-                    <a href="https://nomad-movement.com/" class="front__a" title="Web de Nomad Movement" target="_blank"
-                        rel="noreferrer">
-                        <span class="front__span">Visita la web</span>
-                    </a>
-                    <a href="https://github.com/Shanti-Meldoli/Nomad-Movement" class="front__a"
-                        title="Proyecto en GitHub de Nomad Movement" target="_blank" rel="noreferrer">
-                        <span class="front__span">Ver en GitHub</span>
-                    </a>
-                </div>
+        <section class="front">
+            <div class="front__intro">
+                <h2 class="front__h2">Proyectos web que he maquetado</h2>
+                <p class="front__p">Durante mi formación como Frontend Developer he maquetado distintas webs aplicando lo
+                    aprendido y llevando a cabo un desarrollo desde cero y sin galerias, usando unicamente HTML, CSS y
+                    JavaScript nativo junto a una metodología BEM para garantizar una estructura eficiente y sostenible.</p>
+                <p class="front__p">Estos son algunos de los proyectos en los que he trabajado:</p>
             </div>
-            <img src="#" alt="Imágen de la web de Nomad Movement" class="front__img">
-        </div>
-        <div class="front__wrapper ark">
-            <div class="front__info">
-                <h3 class="front__h3">Ark Shelter - Copycat</h3>
-                <p class="front__p">Esta página es un copycat de la web de Ark Shelter cuyo objetivo era practicar el
-                    uso de videos, el display: grid; y el position.
-                </p>
-                <div class="front__ctas">
-                    <a href="https://www.ark-shelter.com/en" class="front__a" title="Web de Ark Shelter" target="_blank"
-                        rel="noreferrer">
-                        <span class="front__span">Visita la web</span>
-                    </a>
-                    <a href="https://github.com/Shanti-Meldoli/Copycat_Ark-Shelter" class="front__a"
-                        title="Proyecto en GitHub de Ark Shelter" target="_blank" rel="noreferrer">
-                        <span class="front__span">Ver en GitHub</span>
-                    </a>
+            <article class="front__wrapper webnm">
+                <div class="front__info">
+                    <h3 class="front__h3">Nomad Movement</h3>
+                    <p class="front__p">Este sitio web es el reflejo de mi proyecto personal y la razón por la que decidí
+                        adentrarme en el mundo del Marketing. Representa una plataforma donde los usuarios pueden conocer
+                        mejor qué es Nomad Movement, así como aprovechar mis servicios de Coaching Online, incluyendo
+                        programas de entrenamiento personalizados y adaptados a sus necesidades específicas.
+                    </p>
+                    <p class="front__p">Además, la web cuenta con una sección dedicada a Programas, la cual se encuentra en
+                        proceso de desarrollo. Esta área está destinada a ofrecer infoproductos, como programas de
+                        entrenamiento de 4 semanas predefinidos y talleres especializados en habilidades concretas, por
+                        ejemplo, el handstand, entre otros.
+                    </p>
+                    <p class="front__p">Próximamente, tengo previsto enriquecer el sitio con un Blog, proyecto que tomará
+                        forma una vez complete el tercer y último módulo de mi Máster enfocado en WordPress. Este espacio
+                        estará dedicado a compartir conocimientos, experiencias y consejos valiosos, consolidando así mi
+                        compromiso con la entrega de contenido de calidad y el fomento de una comunidad alrededor de Nomad
+                        Movement.
+                    </p>
+                    <div class="front__ctas">
+                        <a href="https://nomad-movement.com/" class="front__a" title="Web de Nomad Movement" target="_blank"
+                            rel="noreferrer">
+                            <span class="front__span">Visita la web</span>
+                        </a>
+                        <a href="https://github.com/Shanti-Meldoli/Nomad-Movement" class="front__a"
+                            title="Proyecto en GitHub de Nomad Movement" target="_blank" rel="noreferrer">
+                            <span class="front__span">Ver en GitHub</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <img src="assets/ark_shelter_cover.jpg" alt="Imágen de la web de Ark Shelter" class="front__img">
-        </div>
-        <div class="front__wrapper stck">
-            <div class="front__info">
-                <h3 class="front__h3">Stockholm 70 - Copycat</h3>
-                <p class="front__p">Esta página es un copycat de la web de Stockholm 70 cuyo objetivo era practicar el
-                    uso de display:grid; y la inserción de video y mapas con iframe, creación de formularios, uso de
-                    Lightbox y efecto carrousel con JavaScript.
-                </p>
-                <div class="front__ctas">
-                    <a href="https://stockholm70.qodeinteractive.com/" class="front__a" title="Web de Stockholm 70" target="_blank"
-                        rel="noreferrer">
-                        <span class="front__span">Visita la web</span>
-                    </a>
-                    <a href="https://github.com/Shanti-Meldoli/Copycat_Stockholm_70" class="front__a"
-                        title="Proyecto en GitHub de Stockholm 70" target="_blank" rel="noreferrer">
-                        <span class="front__span">Ver en GitHub</span>
-                    </a>
+                <div class="front__carrousel carrousel"> <!--Este div contiene el carrousel de imágnes, el cual se compone de tres imágenes dentro de una imágen que ocupa el 300% del contenedor y 3 botones para ir pasando de imágen-->
+                    <div class="carrousel__grande">
+                        <img src="assets/nm_home.jpg" alt="Imágen de la web de Nomad Movement 1" class="carrousel__img">
+                        <img src="assets/nm_testimonials.jpg" alt="Imágen de la web de Nomad Movement 2" class="carrousel__img">
+                        <img src="assets/nm_form.jpg" alt="Imágen de la web de Nomad Movement 3" class="carrousel__img">
+                    </div>
+                    <ul class="carrousel__ul"> <!--Este ul contiene los botones que permiten cambiar de imágen en el carrousel-->
+                        <li class="carrousel__li">
+                            <button class="carrousel__btn active"></button> <!-- Ya tiene la clase active, para que por defecto, al cargar la web ya esté seleccionado -->
+                        </li>
+                        <li class="carrousel__li">
+                            <button class="carrousel__btn"></button>
+                        </li>
+                        <li class="carrousel__li">
+                            <button class="carrousel__btn"></button>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <img src="assets/stockholm_cover.jpg" alt="Imágen de la web de Stockholm 70" class="front__img">
-        </div>
+            </article>
+            <article class="front__wrapper ark"> <!--Este artículo tiene una clase adicional, para posteriormente alternar la posición de la imágen y el texto cambiando el flex-flow en el CSS solo a esa clase y dejando todos los estilos ya indicados en el artículo anterior.-->
+                <div class="front__info">
+                    <h3 class="front__h3">Ark Shelter - Copycat</h3>
+                    <p class="front__p">Esta página es un copycat de la web de Ark Shelter cuyo objetivo era practicar el
+                        uso de videos, el display: grid; y el position.
+                    </p>
+                    <div class="front__ctas">
+                        <a href="https://www.ark-shelter.com/en" class="front__a" title="Web de Ark Shelter" target="_blank"
+                            rel="noreferrer">
+                            <span class="front__span">Visita la web</span>
+                        </a>
+                        <a href="https://github.com/Shanti-Meldoli/Copycat_Ark-Shelter" class="front__a"
+                            title="Proyecto en GitHub de Ark Shelter" target="_blank" rel="noreferrer">
+                            <span class="front__span">Ver en GitHub</span>
+                        </a>
+                    </div>
+                </div>
+                <img src="assets/ark_shelter_cover.jpg" alt="Imágen de la web de Ark Shelter" class="front__img">
+            </article>
+            <article class="front__wrapper stck">
+                <div class="front__info">
+                    <h3 class="front__h3">Stockholm 70 - Copycat</h3>
+                    <p class="front__p">Esta página es un copycat de la web de Stockholm 70 cuyo objetivo era practicar el
+                        uso de display:grid; y la inserción de video y mapas con iframe, creación de formularios, uso de
+                        Lightbox y efecto carrousel con JavaScript.
+                    </p>
+                    <div class="front__ctas">
+                        <a href="https://stockholm70.qodeinteractive.com/" class="front__a" title="Web de Stockholm 70" target="_blank"
+                            rel="noreferrer">
+                            <span class="front__span">Visita la web</span>
+                        </a>
+                        <a href="https://github.com/Shanti-Meldoli/Copycat_Stockholm_70" class="front__a"
+                            title="Proyecto en GitHub de Stockholm 70" target="_blank" rel="noreferrer">
+                            <span class="front__span">Ver en GitHub</span>
+                        </a>
+                    </div>
+                </div>
+                <img src="assets/stockholm_cover.jpg" alt="Imágen de la web de Stockholm 70" class="front__img" loading="lazy">
+            </article>
+        </section>
     </main>
     <!-- SECCIÓN PRINCIPAL DE LA WEB -->
 
