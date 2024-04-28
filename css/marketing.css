@@ -73,6 +73,7 @@ button {
     font-family: inherit;
     background-color: transparent;
 }
+
 /* ---- Reset CSS ---- */
 
 /* ---- ANIMACIÓN DEL BACKGROUND ---- */
@@ -108,6 +109,7 @@ button {
 
     animation: expandblue 60s linear infinite both;
 }
+
 /* ---- ANIMACIÓN DEL BACKGROUND ---- */
 
 /* ---- Modificación de la barra de scroll ---- */
@@ -215,7 +217,7 @@ se le añade la clase active al botón a través de JS
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    
+
     text-align: center;
 }
 
@@ -288,7 +290,7 @@ al pasar el ratón por encima de estos */
    Estructura:
    - mkt contiene una breve descripción de los conocimientos adquiridos durante la formación
 */
-.mkt{
+.mkt {
     width: 95%;
     margin: 2rem auto;
     padding: 1.5rem 3rem;
@@ -299,26 +301,31 @@ al pasar el ratón por encima de estos */
     align-items: flex-start;
     gap: 2rem;
 }
-.mkt__h2{
+
+.mkt__h2 {
     font-size: 1.5em;
 }
-.mkt__p{
+
+.mkt__p {
     font-family: 'Libre Baskerville', serif;
     font-size: .8em;
     font-weight: 400;
 }
-.mkt__ul{
+
+.mkt__ul {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
     gap: .5rem;
 }
-.mkt__li{
+
+.mkt__li {
     font-family: 'Libre Baskerville', serif;
     font-size: .8em;
     font-weight: 400;
 }
+
 /* ---- Marketing ---- */
 /* ---- MAIN ---- */
 
@@ -328,7 +335,7 @@ al pasar el ratón por encima de estos */
    - footer__h4 con el titular del footer
    - footer__p con una invitación a que el usuario me contacte y tiene en su interior unos enlaces tanto a mi correo como al formulario de contacto
    - footer__rrss es la sección de redes sociales */
-   .footer {
+.footer {
     width: 95%;
     background-color: rgba(0, 0, 0, 0.6);
 
@@ -375,17 +382,20 @@ al pasar el ratón por encima de estos */
     align-items: center;
     gap: 1rem;
 }
+
 /* ---- FOOTER ---- */
 
 /* ---- @MEDIAs ---- */
-@media (max-width: 68.75rem){
+@media (max-width: 68.75rem) {
     .header__menu {
         gap: 1.5rem;
     }
-    .header__ul{
+
+    .header__ul {
         gap: 1rem;
     }
 }
+
 @media (max-width: 54.375rem) {
     body::-webkit-scrollbar {
         /* Reducimos el ancho de la barra de scroll, para la versión móvil */
@@ -454,15 +464,26 @@ al pasar el ratón por encima de estos */
         width: 2rem;
         height: 2rem;
     }
+
     .mkt__info {
         padding: 1.5rem 0;
     }
 }
+
 @media (max-width: 48rem) {
+    .mkt {
+        padding: 1.5rem .5rem;
+    }
+
+    .mkt__ul {
+        gap: 1.5rem;
+    }
+
     .footer {
         padding: 2rem 2rem 4rem;
     }
 }
+
 /* ---- @MEDIAs ---- */
 
 /* ---- KEYFRAMEs ---- */
@@ -537,4 +558,5 @@ al pasar el ratón por encima de estos */
         opacity: 1;
     }
 }
+
 /* ---- KEYFRAMEs ---- */

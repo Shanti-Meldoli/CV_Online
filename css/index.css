@@ -218,7 +218,7 @@ se le añade la clase active al botón a través de JS
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    
+
     text-align: center;
 }
 
@@ -419,9 +419,11 @@ al pasar el ratón por encima de estos */
     font-size: .8em;
     font-weight: 400;
 }
-.about__a{
+
+.about__a {
     text-decoration: underline;
 }
+
 .about__img {
     max-width: 40rem;
     margin: auto;
@@ -437,11 +439,12 @@ al pasar el ratón por encima de estos */
    - experience__columns es el contenedor de las tres experiencias
    - experiences__a es el contenedor de cada experiencia siendo un enlace a su página dedicadda y contiene el titular (experiences__h3) y la descripción (experiences__p)
 */
-.experiences{
+.experiences {
     width: 95%;
     margin: auto;
 }
-.experiences__wrapper{
+
+.experiences__wrapper {
     padding: 3rem 2rem;
 
     display: flex;
@@ -451,10 +454,12 @@ al pasar el ratón por encima de estos */
     gap: 3rem;
 
 }
-.experiences__h2{
+
+.experiences__h2 {
     font-size: 1.5em;
 }
-.experience__columns{
+
+.experience__columns {
     max-width: 100%;
     /* background-color: red; */
 
@@ -463,24 +468,29 @@ al pasar el ratón por encima de estos */
     /* El uso del repeat con auto-fit nos permite hacer un diseño más responsive, ahorrando en suo de @medias*/
     gap: 5rem;
 }
-.experiences__a{
+
+.experiences__a {
     /* background-color: violet; */
     text-align: center;
 
     transition: all .5s ease;
 }
-.experiences__column{}
-.experiences__h3{
+
+.experiences__column {}
+
+.experiences__h3 {
     font-size: 1.2em;
 }
-.experiences__p{
+
+.experiences__p {
     font-family: 'Libre Baskerville', serif;
     font-size: .8em;
     font-weight: 400;
 
     margin: .5rem 0 0;
 }
-.cta{
+
+.cta {
     margin: 1rem 0 0;
 
     opacity: 0;
@@ -489,12 +499,15 @@ al pasar el ratón por encima de estos */
 
     transition: all .5s ease;
 }
-.experiences__a:hover{
+
+.experiences__a:hover {
     transform: scale(1.1);
 }
-.experiences__a:hover .cta{
+
+.experiences__a:hover .cta {
     opacity: 1;
 }
+
 /* ---- Experiencias ---- */
 
 /* ---- FOOTER ---- */
@@ -550,6 +563,7 @@ al pasar el ratón por encima de estos */
     align-items: center;
     gap: 1rem;
 }
+
 /* ---- FOOTER ---- */
 
 /* ---- @MEDIAs ---- */
@@ -571,9 +585,11 @@ al pasar el ratón por encima de estos */
     .header__menu {
         gap: 1.5rem;
     }
-    .header__ul{
+
+    .header__ul {
         gap: 1rem;
     }
+
     .hero__wrapper {
         /*Ajusta el position del hero__wrapper respecto a la pantalla*/
         top: 33%;
@@ -584,7 +600,8 @@ al pasar el ratón por encima de estos */
         /*Ajusta el interlineado del titular debido a su tamaño reducido*/
         line-height: .8em;
     }
-    .experience__columns{
+
+    .experience__columns {
         gap: 3rem;
     }
 }
@@ -667,9 +684,11 @@ al pasar el ratón por encima de estos */
         display: block;
         cursor: auto;
         position: relative;
-        z-index: -1; /* Para que el menú móvil aparezca por encima del hero */
+        z-index: -1;
+        /* Para que el menú móvil aparezca por encima del hero */
     }
-    .experience__columns{
+
+    .experience__columns {
         grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
     }
 }
@@ -737,10 +756,12 @@ al pasar el ratón por encima de estos */
         grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
 
     }
-    .experience__columns{
+
+    .experience__columns {
         grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     }
-    .experiences__wrapper{
+
+    .experiences__wrapper {
         padding: 2rem .5rem;
     }
 }
@@ -833,6 +854,7 @@ al pasar el ratón por encima de estos */
 }
 
 @keyframes fadein {
+
     /*Esta animación hacer referencia al texto "Currículum Online" del hero, para que al cargar la web aparezcan poco a poco*/
     from {
         opacity: 0;
@@ -842,4 +864,5 @@ al pasar el ratón por encima de estos */
         opacity: 1;
     }
 }
+
 /* ---- KEYFRAMEs ---- */

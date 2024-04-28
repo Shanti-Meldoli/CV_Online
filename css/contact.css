@@ -128,6 +128,7 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background-color: #009edc;
 }
+
 /* ---- Modificación de la barra de scroll ---- */
 
 /* ---- CABECERA DE LA WEB ---- */
@@ -216,7 +217,7 @@ se le añade la clase active al botón a través de JS
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    
+
     text-align: center;
 }
 
@@ -424,14 +425,16 @@ al pasar el ratón por encima de estos */
 
 /* ---- @MEDIAs ---- */
 /* Descripción: Estilos para adaptar la web a resoluciones menores */
-@media (max-width: 68.75rem){
+@media (max-width: 68.75rem) {
     .header__menu {
         gap: 1.5rem;
     }
-    .header__ul{
+
+    .header__ul {
         gap: 1rem;
     }
 }
+
 @media (max-width: 66.25rem) {
     .section__h2 {
         font-size: 3.5em;
@@ -518,8 +521,12 @@ al pasar el ratón por encima de estos */
 
 @media (max-width: 48rem) {
     .section {
+        width: 95%;
+        padding: 3rem 1rem;
+
         /*Cambia el orden de los elementos de filas a columnas*/
         flex-flow: column nowrap;
+
     }
 
     .section__h2 {
@@ -602,6 +609,7 @@ al pasar el ratón por encima de estos */
         left: 0%;
     }
 }
+
 @keyframes expansion {
 
     /*Esta animación hacer referencia al header, para que al cargar la web se vaya expandiendo desde el centro*/

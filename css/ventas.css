@@ -73,6 +73,7 @@ button {
     font-family: inherit;
     background-color: transparent;
 }
+
 /* ---- Reset CSS ---- */
 
 /* ---- ANIMACIÓN DEL BACKGROUND ---- */
@@ -108,6 +109,7 @@ button {
 
     animation: expandblue 60s linear infinite both;
 }
+
 /* ---- ANIMACIÓN DEL BACKGROUND ---- */
 
 /* ---- Modificación de la barra de scroll ---- */
@@ -215,7 +217,7 @@ se le añade la clase active al botón a través de JS
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    
+
     text-align: center;
 }
 
@@ -290,7 +292,7 @@ al pasar el ratón por encima de estos */
    - ventas__wrapper con la imagen y el texto descriptivo del puesto de trabajo de cada experiencia
 */
 
-.ventas{
+.ventas {
     width: 95%;
     margin: 2rem auto;
     padding: 1.5rem 3rem;
@@ -301,45 +303,54 @@ al pasar el ratón por encima de estos */
     align-items: flex-start;
     gap: 2rem;
 }
-.ventas__intro{
+
+.ventas__intro {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1rem;
 }
-.ventas__h2{
+
+.ventas__h2 {
     font-size: 1.5em;
 }
-.ventas__wrapper{
+
+.ventas__wrapper {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
 }
-.ventas__img{
+
+.ventas__img {
     max-width: 30rem;
     margin: auto;
 }
-.ventas__text{
+
+.ventas__text {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    align-items: flex-start; 
+    align-items: flex-start;
     gap: 1rem;
 }
-.ventas__h3{
+
+.ventas__h3 {
     font-size: 1.2em;
 }
-.ventas__p{
+
+.ventas__p {
     font-family: 'Libre Baskerville', serif;
     font-size: .8em;
     font-weight: 400;
 }
-.teleperformance{
+
+.teleperformance {
     flex-flow: row-reverse;
 }
+
 /* ---- Ventas ---- */
 /* ---- MAIN ---- */
 
@@ -349,7 +360,7 @@ al pasar el ratón por encima de estos */
    - footer__h4 con el titular del footer
    - footer__p con una invitación a que el usuario me contacte y tiene en su interior unos enlaces tanto a mi correo como al formulario de contacto
    - footer__rrss es la sección de redes sociales */
-   .footer {
+.footer {
     width: 95%;
     background-color: rgba(0, 0, 0, 0.6);
 
@@ -396,27 +407,32 @@ al pasar el ratón por encima de estos */
     align-items: center;
     gap: 1rem;
 }
+
 /* ---- FOOTER ---- */
 
 /* ---- @MEDIAs ---- */
-@media (max-width: 87.5rem){
-    .ventas__img{
+@media (max-width: 87.5rem) {
+    .ventas__img {
         max-width: 25rem;
     }
 }
-@media (max-width: 68.75rem){
+
+@media (max-width: 68.75rem) {
     .header__menu {
         gap: 1.5rem;
     }
-    .header__ul{
+
+    .header__ul {
         gap: 1rem;
     }
 }
-@media (max-width: 62.5rem){
-    .ventas__wrapper{
-        flex-flow: column-reverse nowrap;    
+
+@media (max-width: 62.5rem) {
+    .ventas__wrapper {
+        flex-flow: column-reverse nowrap;
     }
 }
+
 @media (max-width: 54.375rem) {
     body::-webkit-scrollbar {
         /* Reducimos el ancho de la barra de scroll, para la versión móvil */
@@ -485,27 +501,35 @@ al pasar el ratón por encima de estos */
         width: 2rem;
         height: 2rem;
     }
-    .main{
+
+    .main {
         padding: 1.5rem 0;
     }
-    .ventas__img{
+
+    .ventas__img {
         max-width: 20rem;
     }
 }
+
 @media (max-width: 48rem) {
-    .main{
+    .ventas {
+        padding: 1.5rem .5rem;
         text-align: center;
     }
-    .ventas__intro{
+
+    .ventas__intro {
         align-items: center;
     }
-    .ventas__text{
+
+    .ventas__text {
         align-items: center;
     }
+
     .footer {
         padding: 2rem 2rem 4rem;
     }
 }
+
 /* ---- @MEDIAs ---- */
 
 /* ---- KEYFRAMEs ---- */
@@ -580,4 +604,5 @@ al pasar el ratón por encima de estos */
         opacity: 1;
     }
 }
+
 /* ---- KEYFRAMEs ---- */
